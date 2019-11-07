@@ -1,15 +1,15 @@
 
-# Gatsby Italian Translation
+# Traduzione italiana di Gatsby
 
-This repo contains the Italian translation for Gatsby.
+Questo repository contiene la traduzione italiana di Gatsby.
 
-Please refer to the [Translation Progress Issue](https://github.com/gatsbyjs/gatsby-it/issues/1) to start translating!
+Controlla la issue [Italian Translation Progress](https://github.com/gatsbyjs/gatsby-it/issues/1) per iniziare a tradurre!
 
-Useful Links:
+Link utili:
 
-* [Style Guide](/style-guide.md)
-* [Gatsby Translation Guide](https://www.gatsbyjs.org/contributing/gatsby-docs-translation-guide/)
-* [Gatsby Discord](https://gatsby.dev/discord)
+* [Guida di stile](/style-guide.md)
+* [Guida alla traduzione di Gatsby](/docs/contributing/gatsby-docs-translation-guide.md)
+* [Discord di Gatsby](https://gatsby.dev/discord) (vieni a trovarci in #translation-it!)
 
-(Feel free to translate this document and add any content you feel would be useful to contributors).
-  
+E ricorda che se fai un contributo a Gatsby puoi richiedere un [premio](/docs/contributing/contributor-swag.md)!
+
