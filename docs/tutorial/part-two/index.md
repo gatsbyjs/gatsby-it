@@ -114,7 +114,7 @@ import "./src/styles/global.css"
 // require('./src/styles/global.css')
 ```
 
-> Nota: Qui funzionano entrambe le sintassi CommonJS (`require`) e ES Module (`import`). Se non sei sicuro su quale scegliere, noi usiamo `import` la maggior parte del tempo. Però, quando lavoriam con file che vengono eseguiti solo in un ambiente Node.js (come `gatsby-node.js`), si dovrà utilizzare `require`.
+> Nota: Qui funzionano entrambe le sintassi CommonJS (`require`) e ES Module (`import`). Se non sei sicuro su quale scegliere, noi usiamo `import` la maggior parte del tempo. Però, quando lavoriamo con file che vengono eseguiti solo in un ambiente Node.js (come `gatsby-node.js`), si dovrà utilizzare `require`.
 
 3. Avvia il server di sviluppo:
 
