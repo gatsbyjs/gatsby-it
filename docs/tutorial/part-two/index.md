@@ -48,7 +48,7 @@ Adesso hai un nuovo sito Gatsby (bastao sul progetto iniziale Gatsby "hello worl
 │       └── index.js
 ```
 
-#### ✋ Aggiungere stili ad un file css
+#### ✋ Aggiungere stili ad un file CSS
 
 1. Crea un file `.css` nel tuo progetto:
 
@@ -80,7 +80,7 @@ html {
 }
 ```
 
-> Nota: Il posizionamento del file di esempio css in una cartella `/src/styles/` è arbitrario.
+> Nota: Il posizionamento del file di esempio CSS in una cartella `/src/styles/` è arbitrario.
 
 #### ✋ Includere il foglio di stile in `gatsby-browser.js`
 
@@ -126,27 +126,27 @@ Se dai un'occhiata al tuo progetto nel browser, dovresti vedere uno sfondo lavan
 
 ![Hello World! lavanda](global-css.png)
 
-> Suggerimento: Questa parte del tutorial si è focalizzata sul modo più veloce e semplice per iniziare a personalizzare un sito Gatsby — importando file CSS direttamente, usando `gatsby-browser.js`. In molti casi, il modo miglore per aggiungere stili globali è con una componente di layout condivisa. [Dai un'occhiata alla documentazione](/docs/global-css/) per approfondire sull'approccio.
+> Suggerimento: Questa parte del tutorial si è focalizzata sul modo più veloce e semplice per iniziare a personalizzare un sito Gatsby — importando file CSS direttamente, usando `gatsby-browser.js`. In molti casi, il modo migliore per aggiungere stili globali è con una componente di layout condivisa. [Dai un'occhiata alla documentazione](/docs/global-css/) per approfondire sull'approccio.
 
 ## Usare CSS orientato ai componenti
 
-Fino ad ora, abbiamo parlato dell'approccio più tradizionale di usare fogli di stile standard css. Adesso, parleremo di diversi metodi per modularizzare i CSS in modo da approcciarci allo stile in modo orientato ai componenti.
+Fino ad ora, abbiamo parlato dell'approccio più tradizionale di usare fogli di stile standard CSS. Adesso, parleremo di diversi metodi per modularizzare i CSS in modo da approcciarci allo stile in modo orientato ai componenti.
 
-### Moduli CSS
+### CSS Modules
 
-Esploriamo i **Moduli CSS**. Citando dalla
+Esploriamo i **CSS Modules**. Citando dalla
 [homepage CSS Module](https://github.com/css-modules/css-modules):
 
-> Un **Modulo CSS** è un file CSS in cui tutti i nomi delle classi e delle animazioni
+> Un **CSS Module** è un file CSS in cui tutti i nomi delle classi e delle animazioni
 > sono definiti localmente per impostazione predefinita.
 
-I Moduli CSS sono molto popolari perchè permettono di scrivere normalmente CSS ma con molta più sicurezza. Lo strumento genera automaticamente nomi unici di classi e animazioni, in modo da non doverti preoccupare di collisioni di nomi.
+I CSS Modules sono molto popolari perché permettono di scrivere normalmente CSS ma con molta più sicurezza. Lo strumento genera automaticamente nomi unici di classi e animazioni, in modo da non doverti preoccupare di collisioni di nomi.
 
-Gatsby funziona subito con i moduli CSS. Questo approccio è di gran lunga consigliato per chi sta inziando a costruire con Gatsby (e React in generale).
+Gatsby funziona subito con i CSS Modules. Questo approccio è di gran lunga consigliato per chi sta inziando a costruire con Gatsby (e React in generale).
 
-#### ✋ Costruire una nuova pagina usando i Moduli CSS
+#### ✋ Costruire una nuova pagina usando i CSS Modules
 
-In questa sezione, creerai un nuovo componente di pagina e personalizzerai quella pagina usando un Modulo CSS.
+In questa sezione, creerai un nuovo componente di pagina e personalizzerai quella pagina usando un CSS Module.
 
 Per prima cosa, crea un nuovo componente `Container`.
 
@@ -161,7 +161,7 @@ export default ({ children }) => (
 )
 ```
 
-Noterai che hai importato un file modulo css chiamato `container.module.css`. Adesso creiamo quel file.
+Noterai che hai importato un file CSS module chiamato `container.module.css`. Adesso creiamo quel file.
 
 2. Nella stessa directory (`src/components`), crea un file `container.module.css` e copia/incolla il codice seguente:
 
@@ -172,7 +172,7 @@ Noterai che hai importato un file modulo css chiamato `container.module.css`. Ad
 }
 ```
 
-Noterai che il nome del file termina con `.module.css` invece del solito `.css`. Questo è il modo con cui comunichi a Gatsby che questo file CSS dovrebbe essere elaborato come un modulo CSS piuttosto che un semplice CSS.
+Noterai che il nome del file termina con `.module.css` invece del solito `.css`. Questo è il modo con cui comunichi a Gatsby che questo file CSS dovrebbe essere elaborato come un CSS module piuttosto che un semplice CSS.
 
 3. Crea un nuovo componente di pagina creando un file in
    `src/pages/about-css-modules.js`:
@@ -192,11 +192,11 @@ export default () => (
 
 Adesso, se visiti `http://localhost:8000/about-css-modules/`, la tua pagina dovrebbe somigliare a questa:
 
-![Pagina con stili modulo CSS](css-modules-basic.png)
+![Pagina con stili CSS Modules](css-modules-basic.png)
 
-#### ✋ Personalizza un componente usando i Moduli CSS
+#### ✋ Personalizza un componente usando i CSS Modules
 
-In questa sezione, creerai una lista di persone con nomi, avatr, e brevi biografie in Latino. Creerai un componente `<User />` e personalizzerai quel componente usando un modulo CSS.
+In questa sezione, creerai una lista di persone con nomi, avatar, e brevi biografie in latino. Creerai un componente `<User />` e personalizzerai quel componente usando un CSS Module.
 
 1. Crea il file per il CSS in `src/pages/about-css-modules.module.css`.
 
@@ -250,9 +250,9 @@ console.log(styles)
 
 Il codice della `console.log(styles)` farà il log dell'import risultante così da permetterti di vedere il risultato del tuo file `./about-css-modules.module.css` elaborato. Se apri la console dello sviluppatore (usando ad esempio gli strumenti da sviluppatore di Firefox o Chrome) nel tuo browser, vedrai:
 
-![Importa il risultato del modulo CSS nella console](css-modules-console.png)
+![Importa il risultato del CSS Module nella console](css-modules-console.png)
 
-Se lo compari al tuo file CSS, vedrai che ogni classe è adesso una chiave nell'oggetto importato puntante ad una lunga stringa, ad esempio `avatar` punta a `src-pages----about-css-modules-module---avatar---2lRF7`. Questi sono i nomi delle classi che i Moduli CSS generano. L'unicità è garantita all'interno del sito. E poichè hai bisogno di importarli per usare le classi, non c'è mai dubbio su dove alcuni CSS vengano usati.
+Se lo compari al tuo file CSS, vedrai che ogni classe è adesso una chiave nell'oggetto importato puntante ad una lunga stringa, ad esempio `avatar` punta a `src-pages----about-css-modules-module---avatar---2lRF7`. Questi sono i nomi delle classi che i CSS Modules generano. L'unicità è garantita all'interno del sito. E poiché hai bisogno di importarli per usare le classi, non c'è mai dubbio su dove alcuni CSS vengano usati.
 
 4. Crea un componente `User`.
 
@@ -297,11 +297,11 @@ export default () => (
 )
 ```
 
-> Suggerimento: Generalmente, se utilizzi un componente di un sito in diversi posti, esso dovrebbe trovarsi nel suo proprio file di modulo nella directory `components`. Ma, se è utilizzato solo in un file, creaolo in linea.
+> Suggerimento: Generalmente, se utilizzi un componente di un sito in diversi posti, esso dovrebbe trovarsi nel suo proprio file di modulo nella directory `components`. Ma, se è utilizzato solo in un file, crealo in linea.
 
 La pagina finale dovrebbe adesso somigliare a questa:
 
-![Pagina di lista di utenti con moduli CSS](css-modules-userlist.png)
+![Pagina di lista di utenti con CSS Modules](css-modules-userlist.png)
 
 ### CSS-in-JS
 
@@ -309,15 +309,15 @@ CSS-in-JS è un approccio di personalizzazione orientato a componenti. Generalme
 
 #### Usare CSS-in-JS con Gatsby
 
-Ci sono diverse librerie CSS-in-JS e molte presentano già i plugin Gatsby. Non approfondiremo un esempio CSS-in-JS in questo tutorial iniziale, ma ti incoraggiamo a [esplorare](/docs/styling/) cosa l'ecosistema ha da offrire. Ci sono dei mini-tutorial per due librerie, in particolare [Emozione](/docs/emotion/) e [Componenti personalizzati](/docs/styled-components/).
+Ci sono diverse librerie CSS-in-JS e molte presentano già i plugin Gatsby. Non approfondiremo un esempio CSS-in-JS in questo tutorial iniziale, ma ti incoraggiamo a [esplorare](/docs/styling/) cosa l'ecosistema ha da offrire. Ci sono dei mini-tutorial per due librerie, in particolare [Emotion](/docs/emotion/) e [Styled Components](/docs/styled-components/).
 
 #### Letture consigliate su CSS-in-JS
 
-Se sei interessato in altre letture, dai un'occhiata a [Christopher "vjeux" Chedeau's 2014 presentation that sparked this movement](https://speakerdeck.com/vjeux/react-css-in-js) così come a [Mark Dalgleish's more recent post "A Unified Styling Language"](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
+Se sei interessato in altre letture, dai un'occhiata a ["vjeux" di Christopher Chedeau del 2014 presentazione che ha scatenato questo movimento](https://speakerdeck.com/vjeux/react-css-in-js) così come a [l'articolo più recente di Mark Dalgleish "A Unified Styling Language"](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
 
 ### Altre opzioni di CSS
 
-Gatsby supporta quasi ogni possibile opzione di personalizzazione (Se non è ancora presente un plugin per la tua opzione di CSS preferita, [per favore contribuisci ad inserirla!](/contributing/how-to-contribute/))
+Gatsby supporta quasi ogni possibile opzione di personalizzazione (Se non è ancora presente un plugin per la tua opzione di css preferita, [per favore contribuisci ad inserirla!](/contributing/how-to-contribute/))
 
 - [Typography.js](/packages/gatsby-plugin-typography/)
 - [Sass](/packages/gatsby-plugin-sass/)
@@ -329,4 +329,4 @@ e altre!
 
 ## Cosa viene dopo?
 
-Adesso continua su [terza parte del tutorial](/tutorial/part-three/), dove imparerai riguardo i plugin Gatsby e i componenti di layout.
+Adesso continua con la [terza parte del tutorial](/tutorial/part-three/), dove imparerai riguardo i plugin Gatsby e i componenti di layout.
