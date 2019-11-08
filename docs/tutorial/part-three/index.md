@@ -169,8 +169,6 @@ Vediamo come appare la nuova pagina:
 
 Hmm. Sarebbe bello se il contenuto delle due nuove pagine fosse centrato come la prima pagina. E sarebbe bello avere una sorta di navigazione globale per permettere ai visitatori di trovare e visitare ciascuna delle sottopagine.
 
-And it would be nice to have some sort of global navigation so it's easy for visitors to find and visit each of the sub-pages.
-
 Affronterai queste modifiche creando il tuo primo componente di layout.
 
 ### ✋ Crea il tuo primo componente di layout
