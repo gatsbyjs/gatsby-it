@@ -114,7 +114,7 @@ import "./src/styles/global.css"
 // require('./src/styles/global.css')
 ```
 
-> Nota: Qui funzionano entrambe le sintassi CommonJS (`require`) e ES Module (`import`). Se non sei sicuro su quale scegliere, noi usiamo `import` la maggior parte del tempo.
+> Nota: Qui funzionano entrambe le sintassi CommonJS (`require`) e ES Module (`import`). Se non sei sicuro su quale scegliere, noi usiamo `import` la maggior parte del tempo. Però, quando lavoriam con file che vengono eseguiti solo in un ambiente Node.js (come `gatsby-node.js`), si dovrà utilizzare `require`.
 
 3. Avvia il server di sviluppo:
 
@@ -313,7 +313,7 @@ Ci sono diverse librerie CSS-in-JS e molte presentano già i plugin Gatsby. Non 
 
 #### Letture consigliate su CSS-in-JS
 
-Se sei interessato in altre letture, dai un'occhiata a ["vjeux" di Christopher Chedeau del 2014 presentazione che ha scatenato questo movimento](https://speakerdeck.com/vjeux/react-css-in-js) così come a [l'articolo più recente di Mark Dalgleish "A Unified Styling Language"](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
+Se sei interessato in altre letture, dai un'occhiata a [questa presentazione del 2014 di Christopher "vjeux" Chedeau che ha scatenato questo movimento](https://speakerdeck.com/vjeux/react-css-in-js) così come a [l'articolo più recente di Mark Dalgleish "A Unified Styling Language"](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
 
 ### Altre opzioni di CSS
 
