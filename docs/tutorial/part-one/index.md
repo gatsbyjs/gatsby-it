@@ -1,5 +1,5 @@
 ---
-title: Impariamo a conoscere i componenti di Gatsby
+title: Impariamo a conoscere elementi costitutivi di Gatsby
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
