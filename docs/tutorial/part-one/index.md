@@ -1,5 +1,5 @@
 ---
-title: Impariamo a conoscere le componenti di Gatsby
+title: Impariamo a conoscere i componenti di Gatsby
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -24,7 +24,8 @@ gatsby new [SITE_DIRECTORY_NAME] [URL_OF_STARTER_GITHUB_REPO]
 Se ometti una URL alla fine, Gatsby andrà a generare per te, in maniera automatica, un sito basato sul template [**default starter**](https://github.com/gatsbyjs/gatsby-starter-default). Per questa sezione del tutorial, continua a lavorare sul sito "Hello World" che hai già creato nel tutorial zero.
 =======
 If you omit a URL from the end, Gatsby will automatically generate a site for you based on the [**default starter**](https://github.com/gatsbyjs/gatsby-starter-default). For this section of the tutorial, stick with the “Hello World” site you already created in tutorial part zero. You can learn more about [modifying starters](/docs/modifying-a-starter) in the docs.
->>>>>>> d8b039738bb3fd6173f4578f149c3d5abeb27722
+
+> > > > > > > d8b039738bb3fd6173f4578f149c3d5abeb27722
 
 ### ✋ Apri il codice
 
@@ -332,7 +333,8 @@ export default () => (
 Dopo aver salvato il file, dovresti vedere la pagina dei contatti e dovresti essere in grado di collegarti attraverso la homepage.
 =======
 After you save the file, you should see the contact page and be able to follow the link to the homepage.
->>>>>>> d8b039738bb3fd6173f4578f149c3d5abeb27722
+
+> > > > > > > d8b039738bb3fd6173f4578f149c3d5abeb27722
 
 <video controls="controls" loop="true">
   <source type="video/mp4" src="./10-linking-between-pages.mp4"></source>
