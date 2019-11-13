@@ -353,4 +353,4 @@ Quindi quasi ovunque, le modifiche apportate avranno immediatamente effetto. Mod
 
 ## Cosa verrà dopo?
 
-Successivamente, imparerai come caricare i dati nel tuo sito Gatsby usando GraphQL con i source plugin nella [pare cinque](/tutorial/part-five/) del tutorial.
+Successivamente, imparerai come caricare i dati nel tuo sito Gatsby usando GraphQL con i source plugin nella [parte cinque](/tutorial/part-five/) del tutorial.
