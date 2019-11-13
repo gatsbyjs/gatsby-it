@@ -14,9 +14,7 @@ Hai anche esplorato lo stile dei componenti usando i moduli CSS.
 
 ## Cosa c'è in questo tutorial?
 
-Nelle prossime quattro parti del tutorial (incluso questo), you'll be diving into the Gatsby data layer, which is a powerful feature of Gatsby that lets you easily build sites from Markdown, WordPress, headless CMSs, and other data sources of all flavors.
-
-ti immergerai nel data layer di Gatsby, è una potente funzionalità di Gatsby che ti consente di creare facilmente siti da Markdown, WordPress, CMS headless e molte altre fonti di dati.
+Nelle prossime quattro parti del tutorial (incluso questo), imparerai a conoscere il data layer di Gatsby, una potente funzionalità di Gatsby che ti consente di creare facilmente siti da Markdown, WordPress, CMS headless e molte altre fonti di dati.
 
 **NOTA:** il data layer di Gatsby è basato su GraphQL. Per un'esercitazione approfondita su GraphQL, consigliamo [How to GraphQL](https://www.howtographql.com/).
 
