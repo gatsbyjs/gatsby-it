@@ -51,7 +51,7 @@ npm install --save gatsby-plugin-typography react-typography typography typograp
 
 > Nota: Typography.js richiede alcuni pacchetti aggiuntivi, quindi sono inclusi nelle istruzioni. Requisiti aggiuntivi come questi saranno elencati nelle istruzioni di "installazione" di ciascun plugin.
 
-2. Modifica il file `gatsby-config.js` alla radice del tuo progetto nel seguente modo:
+2. Modifica il file `gatsby-config.js` nella root del tuo progetto nel seguente modo:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
