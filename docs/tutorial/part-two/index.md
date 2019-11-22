@@ -254,9 +254,7 @@ Il codice della `console.log(styles)` farà il log dell'import risultante così 
 
 Se lo compari al tuo file CSS, vedrai che ogni classe è adesso una chiave nell'oggetto importato puntante ad una lunga stringa, ad esempio `avatar` punta a `src-pages----about-css-modules-module---avatar---2lRF7`. Questi sono i nomi delle classi che i CSS Modules generano. L'unicità è garantita all'interno del sito. E poiché hai bisogno di importarli per usare le classi, non c'è mai dubbio su dove alcuni CSS vengano usati.
 
-4. Crea un componente `User`.
-
-Crea un nuovo componente `<User />` in linea nella pagina componente `about-css-modules.js`. Modifica `about-css-modules.js` in modo da farlo somigliare al seguente codice:
+4. Crea un nuovo componente `<User />` in linea nella pagina componente `about-css-modules.js`. Modifica `about-css-modules.js` in modo da farlo somigliare al seguente codice:
 
 ```jsx:title=src/pages/about-css-modules.js
 import React from "react"
