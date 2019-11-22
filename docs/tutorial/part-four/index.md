@@ -49,7 +49,7 @@ Consulta la guida sull'[Utilizzo di Gatsby senza GraphQL](/docs/using-gatsby-wit
 
 ### Quando devo usare dati non strutturati rispetto a GraphQL?
 
-Se stai costruendo un sito di piccole dimensioni, un modo efficace per crearlo è quello di inserire dati non strutturati come indicato in questa guida,  utilizzando l' API `createPages`, e se il sito diventa più complesso in seguito, o si passa alla creazione di siti più complessi, o desideri trasformare i tuoi dati, segui questi passaggi:
+Se stai costruendo un sito di piccole dimensioni, un modo efficace per crearlo è quello di inserire dati non strutturati come indicato in questa guida, utilizzando l' API `createPages`, e se il sito diventa più complesso in seguito, o si passa alla creazione di siti più complessi, o desideri trasformare i tuoi dati, segui questi passaggi:
 
 1.  Controlla la [libreria dei plugin](/plugins/) per vedere se i source plugins e/o i transformer plugins che desideri utilizzare esistono già
 2.  Se non esistono, leggi la guida per la guida per [creare plugin](/docs/creating-plugins/) e prendi in considerazione l' idea di crearne uno tuo!

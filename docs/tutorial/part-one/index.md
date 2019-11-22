@@ -54,11 +54,11 @@ Apri il file `src/pages/index.js`. Il codice in questo file crea un componente c
 2.  Ora puoi rendere le tue modifiche un po' più visibili. Prova a sostituire il codice in `src/pages/index.js` con il codice in basso e salva le modifiche. Vedrai dei cambiamenti nel testo - il colore del testo sarà viola e la dimensione del carattere sarà più grande.
 
 ```jsx:title=src/pages/index.js
-import React from "react";
+import React from "react"
 
 export default () => (
   <div style={{ color: `purple`, fontSize: `72px` }}>Hello Gatsby!</div>
-);
+)
 ```
 
 > 💡 Discuteremo più dettagliatamente dello styling in Gatsby nella [**seconda parte**](/tutorial/part-two/) del tutorial.
@@ -83,7 +83,7 @@ export default () => (
 4.  Aggiungi un'immagine. (In questo caso, un'immagine a caso da Unsplash).
 
 ```jsx:title=src/pages/index.js
-import React from "react";
+import React from "react"
 
 export default () => (
   <div style={{ color: `purple` }}>
@@ -92,7 +92,7 @@ export default () => (
     {/* highlight-next-line */}
     <img src="https://source.unsplash.com/random/400x200" alt="" />
   </div>
-);
+)
 ```
 
 ![Add image](04-add-image.png)
@@ -104,17 +104,17 @@ _Se hai familiarità con React e JSX, non esitare a saltare questo paragrafo._ S
 Considera il contenuto iniziale del file `src/pages/index.js`:
 
 ```jsx:title=src/pages/index.js
-import React from "react";
+import React from "react"
 
-export default () => <div>Hello world!</div>;
+export default () => <div>Hello world!</div>
 ```
 
 In puro codice JavaScript, somiglia più a questo:
 
 ```javascript:title=src/pages/index.js
-import React from "react";
+import React from "react"
 
-export default () => React.createElement("div", null, "Hello world!");
+export default () => React.createElement("div", null, "Hello world!")
 ```
 
 Ora forse sarà più chiaro l'utilizzo di import `'react'`! Ma aspetta. Stai utilizzando JSX, non puro HTML o JavaScript. Come fa il browser a leggerlo? Per essere brevi: non lo legge. I siti Gatsby sono dotati di strumenti già configurati per convertire il tuo codice sorgente in qualcosa che il browser può interpretare.
@@ -155,14 +155,14 @@ Hai già un file `src/pages/index.js` generato con lo starter “Hello World”.
 1.  Crea un nuovo file `src/pages/about.js`, copia il seguente codice nel file e salva.
 
 ```jsx:title=src/pages/about.js
-import React from "react";
+import React from "react"
 
 export default () => (
   <div style={{ color: `teal` }}>
     <h1>About Gatsby</h1>
     <p>Such wow. Very React.</p>
   </div>
-);
+)
 ```
 
 2.  Vai su http://localhost:8000/about/.
@@ -179,23 +179,23 @@ Supponiamo che la homepage e la pagina di informazioni (about) siano diventate a
 2.  Aggiungi il seguente codice al nuovo file `src/components/header.js`.
 
 ```jsx:title=src/components/header.js
-import React from "react";
+import React from "react"
 
-export default () => <h1>This is a header.</h1>;
+export default () => <h1>This is a header.</h1>
 ```
 
 3.  Modifica il file `about.js` al fine di importare il coponente `Header`. Sostituisci il markup `h1` con `<Header />`:
 
 ```jsx:title=src/pages/about.js
-import React from "react";
-import Header from "../components/header"; // highlight-line
+import React from "react"
+import Header from "../components/header" // highlight-line
 
 export default () => (
   <div style={{ color: `teal` }}>
     <Header /> {/* highlight-line */}
     <p>Such wow. Very React.</p>
   </div>
-);
+)
 ```
 
 ![Adding Header component](06-header-component.png)
@@ -213,15 +213,15 @@ export default props => <h1>{props.headerText}</h1> {/* highlight-line */}
 5.  Torna su `src/pages/about.js` e modifica come segue:
 
 ```jsx:title=src/pages/about.js
-import React from "react";
-import Header from "../components/header";
+import React from "react"
+import Header from "../components/header"
 
 export default () => (
   <div style={{ color: `teal` }}>
     <Header headerText="About Gatsby" /> {/* highlight-line */}
     <p>Such wow. Very React.</p>
   </div>
-);
+)
 ```
 
 ![Passing data to header](07-pass-data-header.png)
@@ -257,8 +257,8 @@ Se avessi passato un altro prop al tuo componente `<Header />`, come ad esempio.
 6.  Per evidenziare come tutto questo renda i tuoi componenti riutilizzabili, aggiungi un altro componente `<Header />` alla pagina di informazioni, inserisci il seguente codice nel file `src/pages/about.js` e salva.
 
 ```jsx:title=src/pages/about.js
-import React from "react";
-import Header from "../components/header";
+import React from "react"
+import Header from "../components/header"
 
 export default () => (
   <div style={{ color: `teal` }}>
@@ -266,7 +266,7 @@ export default () => (
     <Header headerText="It's pretty cool" /> {/* highlight-line */}
     <p>Such wow. Very React.</p>
   </div>
-);
+)
 ```
 
 ![Doppia intestazione per mostrare i componenti riutilizzabili](08-duplicate-header.png)
@@ -288,9 +288,9 @@ Spesso vorrai collegare le tue pagine — diamo un'occiata al routing in un sito
 1.  Apri il componete della pagina di index (`src/pages/index.js`), importa il componente `<Link />` da Gatsby, aggiungi ill componente `<Link />` nella sezione header, e configuralo con una proprietà `to` con il valore di `"/contact/"` per il percorso:
 
 ```jsx:title=src/pages/index.js
-import React from "react";
-import { Link } from "gatsby"; // highlight-line
-import Header from "../components/header";
+import React from "react"
+import { Link } from "gatsby" // highlight-line
+import Header from "../components/header"
 
 export default () => (
   <div style={{ color: `purple` }}>
@@ -299,7 +299,7 @@ export default () => (
     <p>What a world.</p>
     <img src="https://source.unsplash.com/random/400x200" alt="" />
   </div>
-);
+)
 ```
 
 Quando clicchi sul link "Contact" della homepage, dovresti vedere...
@@ -311,9 +311,9 @@ Quando clicchi sul link "Contact" della homepage, dovresti vedere...
 2.  Dovrai ora creare un componente di pagina per la tua nuova pagina "Contact" in `src/pages/contact.js` e collegarla alla homepage:
 
 ```jsx:title=src/pages/contact.js
-import React from "react";
-import { Link } from "gatsby";
-import Header from "../components/header";
+import React from "react"
+import { Link } from "gatsby"
+import Header from "../components/header"
 
 export default () => (
   <div style={{ color: `teal` }}>
@@ -321,7 +321,7 @@ export default () => (
     <Header headerText="Contact" />
     <p>Send us a message!</p>
   </div>
-);
+)
 ```
 
 Dopo aver salvato il file, dovresti vedere la pagina dei contatti e dovresti essere in grado di collegarti attraverso la homepage.
