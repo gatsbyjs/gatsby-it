@@ -85,7 +85,7 @@ Clicca sul menu a discesa `allFile`. Posiziona il cursore dopo `allFile` nell'ar
 
 ![filesystem-query](filesystem-query.png)
 
-Nle riquadro Explorer, il campo `id` è stato selezionato automaticamente. Effettua la selezione per più campi selezionando la casella corrispondente. Premi "Play" per eseguire di nuovo la query, con i nuovi campi:
+Nel riquadro Explorer, il campo `id` è stato selezionato automaticamente. Effettua la selezione per più campi selezionando la casella corrispondente. Premi "Play" per eseguire di nuovo la query, con i nuovi campi:
 
 ![filesystem-explorer-options](filesystem-explorer-options.png)
 
