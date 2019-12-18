@@ -206,3 +206,30 @@ Per ulteriori informazioni, controlla la [documentazione Gatsby REPL](/docs/gats
 ### Disabilitare l'output colorato
 
 In aggiunta all'opzione esplicita `--no-color`, il CLI considera la presenza della variabile d'ambiente `NO_COLOR` (vedi [no-color.org](https://no-color.org/)).
+
+## Come cambiare il tuo package manager predefinito per il tuo prossimo progetto?
+
+Quando usi`gatsby new` per la prima volta per creare un nuovo progetto, ti viene chiesto di scegliere il tuo package manager tra yarn ed npm.
+
+```shell
+Which package manager would you like to use ? › - Use arrow-keys. Return to submit.
+❯  yarn
+   npm
+```
+
+Una volta fatta la scelta, il CLI non ti chiederà piuù la tua preferenza per ogni progetto successivo. 
+
+Se la vuoi cambiare per il prossimo progetto devi modificare il file di configurazione creato automaticamente dal CLI.
+Questo file è disponibile sul tuo sistema qui: `~/.config/gatsby/config.json`
+
+Al suo interno vedrai qualcosa del genere.
+
+```json:title=config.json
+{
+  "cli": {
+    "packageManager": "yarn"
+  }
+}
+```
+
+Modifica il tuo valore `packageManager`, salva e puoi andare al tuo prossimo progetto usando `gatsby new`.

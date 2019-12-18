@@ -1,14 +1,14 @@
-# Style Guide
+# Guida di stile
 
-Use this file for language-specific style rules to follow for translation.
+In questo file puoi trovare le regole specifiche da seguire per la traduzione in italiano di Gatsby.
 
-## Rules
+## Regole
 
-### Text in Code Blocks
+### Testo nei blocchi di codice
 
-Leave text in code blocks untranslated except for comments. You may optionally translate text in strings, but be careful not to translate strings that refer to code!
+Non tradurre il testo nei blocchi di codice, fatta eccezione per i commenti. Se vuoi, puoi tradurre il testo nelle stringhe, ma fai attenzione a non tradurre le stringhe che si riferiscono al codice!
 
-Example:
+Esempio:
 
 ```js
 // Example
@@ -18,73 +18,79 @@ export default () => (
 )
 ```
 
-✅ DO:
+✅ Si può:
 
 ```js
-// Ejemplo
+// Esempio
 import React from "react"
 export default () => (
   <div style={{ color: `purple`, fontSize: `72px` }}>Hello Gatsby!</div>
 )
 ```
 
-✅ ALSO OKAY:
+✅ Anche questo va bene:
 
 ```js
-// Ejemplo
+// Esempio
 import React from "react"
 export default () => (
-  <div style={{ color: `purple`, fontSize: `72px` }}>¡Hola Gatsby!</div>
+  <div style={{ color: `purple`, fontSize: `72px` }}>Ciao, Gatsby!</div>
 )
 ```
 
-❌ DON'T:
+❌ Non si può:
 
 ```js
-// Ejemplo
+// Esempio
 import React from "react"
 export default () => (
-  // 'purple' is a CSS keyword
-  <div style={{ color: `morado`, fontSize: `72px` }}>¡Hola Gatsby!</div>
+  // 'purple' è una parola chiave di CSS
+  <div style={{ color: `viola`, fontSize: `72px` }}>Ciao, Gatsby!</div>
 )
 ```
 
-❌ DEFINITELY DON'T:
+❌ Non fare assolutamente:
 
 ```js
-importar Reaccionar desde "reaccionar"
-exportar defecto () => (
-   <div estilo = {{color: `morado`, fontSize:` 72px`}}> ¡Hola Gatsby! </div>
+importa Reagire da "reagire"
+esporta predefinito () => (
+   <div stile={{ colore: `viola`, fontSize:` 72px` }}>Ciao, Gatsby!</div>
 )
 ```
 
-### External Links
+### Collegamenti esterni
 
-If an external link is to an article in a reference like [MDN] or [Wikipedia], and a version of that article exists in your language that is of decent quality, consider linking to that version instead.
+Se un collegamento esterno punta a un articolo di una fonte come [MDN] o [Wikipedia], ed esiste una versione in lingua di quell'articolo che sia di buona qualità, considera la possibilità di far puntare il collegamento a quell'articolo.
 
-[mdn]: https://developer.mozilla.org/en-US/
-[wikipedia]: https://en.wikipedia.org/wiki/Main_Page
+[mdn]: https://developer.mozilla.org/it/
+[wikipedia]: https://it.wikipedia.org/wiki/Pagina_principale
 
-Example:
+Esempio:
 
 ```md
-React elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object).
+React is an open source [JavaScript](https://en.wikipedia.org/wiki/JavaScript) library.
 ```
 
 ✅ OK:
 
 ```md
-Los elementos de React son [inmutables](https://es.wikipedia.org/wiki/Objeto_inmutable).
+React è una libreria [JavaScript](https://it.wikipedia.org/wiki/JavaScript) open source.
 ```
 
-For links that have no equivalent (Stack Overflow, YouTube videos, etc.), just use the English link.
+Per i link che non hanno un equivalente in lingua (Stack Overflow, video di YouTube, ecc.), usa il collegamento in inglese.
 
-## Glossary
+## Glossario
 
-Use this section to list how common technical terminology should be translated.
+In questa sezione puoi trovare una guida alla traduzione dei termini tecnici più comuni.
 
-| Term   | Translation |
-| ------ | ----------- |
-| Plugin | ??          |
-| Theme  | ??          |
-| Query  | ??          |
+| Terminologia | Traduzione |
+| ------------ | ---------- |
+| Theme        | Tema       |
+| ...          | ??         |
+
+Termini e frasi che non vanno tradotti in italiano:
+
+- Query
+- Plugin
+
+Aiutaci ad ampliare questa lista con una PR!
