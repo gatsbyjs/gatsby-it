@@ -3,13 +3,13 @@ title: Commands (Gatsby CLI)
 tableOfContentsDepth: 2
 ---
 
-Il Gatsby command line tool (CLI) è il principale strumento per installare e far funzionare una applicazione Gatsby e per l'utilizzo di funzionalità come l'esecuzione di un server di sviluppo e la creazione dell'applicazione Gatsby per il deployment.
+Il Gatsby Command Line Tool (CLI) è il principale strumento per installare e far funzionare una applicazione Gatsby e per l'utilizzo di funzionalità come l'esecuzione di un server di sviluppo e la creazione della tua applicazione Gatsby per il deployment.
 
-_Forniamo una documentazione simile disponibile con il gatsby-cli [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md), e il nostro [cheat sheet](/docs/cheat-sheet/) contiene tutti i principali comandi CLI has all the top CLI commands ready to print out._
+_Forniamo una documentazione simile disponibile con il gatsby-cli [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md), e il nostro [cheat sheet](/docs/cheat-sheet/) contiene tutti i principali comandi CLI pronti per essere stampati._
 
 ## Come usare gatsby-cli
 
-Il Gatsby CLI (`gatsby-cli`) è costituito da un eseguibile che può essere utilizzato globalmente. Il Gatsby CLI è disponibile tramite [npm](https://www.npmjs.com/) e deve essere installato globalmente eseguendo `npm install -g gatsby-cli` per utilizzarlo localmente.
+Il Gatsby CLI (`gatsby-cli`) è costituito da un eseguibile che può essere utilizzato globalmente. Il Gatsby CLI è disponibile tramite [npm](https://www.npmjs.com/) e può essere installato globalmente eseguendo `npm install -g gatsby-cli` per utilizzarlo localmente.
 
 Esegui `gatsby --help` per l'aiuto completo.
 
@@ -38,7 +38,7 @@ gatsby new [<site-name> [<starter-url>]]
 | site-name   | Il nome del tuo sito Gatsby, che è usato anche per creare la directory del progetto.                                                                                                                                                                                |
 | starter-url | Un Gatsby starter URL oppure un percorso locale ad un file. L'impostazione predefinita è [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); vedi la documentazione [Gatsby starters](/docs/gatsby-starters/) per ulteriori informazioni. |
 
-> Nota: Il `site-name` deve essere composto di lettere e numeri. Se specifichi un `.`, `./` o uno `<spazio>` nel nome, `gatsby new` produrraà un errore.
+> Nota: Il `site-name` deve essere composto di lettere e numeri. Se specifichi un `.`, `./` o uno `<spazio>` nel nome, `gatsby new` produrrà un errore.
 
 #### Esempi
 
@@ -54,7 +54,7 @@ gatsby new my-awesome-site
 gatsby new my-awesome-blog-site https://github.com/gatsbyjs/gatsby-starter-blog
 ```
 
-- Se ometti entrambi gli argomenti, il CLI eseguirà una shell intereattiva che richiede questi input:
+- Se ometti entrambi gli argomenti, il CLI eseguirà una shell intereattiva che richiederà questi input:
 
 ```shell
 gatsby new
@@ -70,7 +70,7 @@ Vedi la [documentazione Gatsby starters](https://www.gatsbyjs.org/docs/gatsby-st
 
 ### `develop`
 
-Una volta installato un sito Gatsby, vai alla root directory del tuo progetto e avvia il server di sviluppo:
+Una volta installato un sito Gatsby, vai alla cartella root del tuo progetto e avvia il server di sviluppo:
 
 `gatsby develop`
 
@@ -87,13 +87,13 @@ Segui la [guida Local HTTPS](/docs/local-https/) per scoprire come impostare un 
 
 #### Anteprima dei cambiamenti su altri dispositivi
 
-Puoi utilizzare il comando Gatsby develop insieme all'opzione host per accedere al tuo ambiente di sviluppo su altri devices nella stessa rete, esegui:
+Puoi utilizzare il comando Gatsby develop insieme all'opzione host per accedere al tuo ambiente di sviluppo su altri dispositivi sulla stessa rete, esegui:
 
 ```shell
 gatsby develop -H 0.0.0.0
 ```
 
-Dopo di che il terminal mostrerà il log delle informazioni come sempre, ma aggiungerà in più un URL al quale puoi accedere da un client sulla stessa rete per vedere come appare il sito.
+Dopo di che il terminal mostrerà come sempre il log delle informazioni, ma aggiungerà in più un URL al quale puoi accedere da un client sulla stessa rete per vedere come appare il sito.
 
 ```
 Puoi adesso vedere gatsbyjs.org sul tuo browser.
@@ -119,17 +119,17 @@ Dalla root del tuo sito Gatsby, compila la tua applicazione e preparala per il d
 | `--open-tracing-config-file` | File di configurazione per il tracing (compatibile con OpenTracing). Vedi [Performance Tracing](/docs/performance-tracing/) |
 | `--no-color`, `--no-colors`  | Disabilita l'output colorato sul terminale                                                                                  |
 
-In aggiunta a queste operazioni di build, ci sono alcune [variabili d'ambiente per il build opzionali](/docs/environment-variables/#build-variables) per configurazioni più avanzate per configurazioni più avanzate che possono regolare il modo in cui viene eseguita una build. Ad esempio, settando `CI=true` come una variabile d'ambiente adatterà l'output per i [dumb terminals](https://en.wikipedia.org/wiki/Computer_terminal#Dumb_terminals).
+In aggiunta a queste operazioni di build, ci sono alcune [variabili d'ambiente opzionali per il build](/docs/environment-variables/#build-variables) per configurazioni più avanzate che possono decidere il modo in cui viene eseguita una build. Ad esempio, settando `CI=true` come variabile d'ambiente si adatterà l'output per i [dumb terminals](https://en.wikipedia.org/wiki/Computer_terminal#Dumb_terminals).
 
 ### `serve`
 
-Dalla root di un sito Gatsby, fa girare la build di produzione sul tuo sito per testarla:
+Dalla root di un sito Gatsby, fai girare la build di produzione sul tuo sito per testarla:
 
 `gatsby serve`
 
 #### Opzioni
 
-|      Option      | Description                                                                                                                       |
+|     Opzione      | Descrizione                                                                                                                       |
 | :--------------: | --------------------------------------------------------------------------------------------------------------------------------- |
 |  `-H`, `--host`  | Impsta host. L'impostazione predefinita è localhost                                                                               |
 |  `-p`, `--port`  | Imposta la porta. L'impostazione predefinita è 9000                                                                               |
@@ -138,7 +138,7 @@ Dalla root di un sito Gatsby, fa girare la build di produzione sul tuo sito per 
 
 ### `info`
 
-Dalla root del tuo sito Gatsby, ottieni informazioni utili sull'ambiente saranno richieste quando riporti un bug:
+Dalla root del tuo sito Gatsby, ottieni informazioni utili sull'ambiente che saranno richieste quando riporti un bug:
 
 `gatsby info`
 
@@ -163,17 +163,17 @@ Questo è utile come ultima risorsa quando il tuo progetto locale sembra avere d
 
 ### `plugin`
 
-Esegui i comandi Run commands attinenti ai plugin di gatsby.
+Esegui i comandi relativi ai plugin di gatsby.
 
 #### `docs`
 
 `gatsby plugin docs`
 
-Ti porta alla documentazione riguardo all'uso e alla creazione di plugin.
+Ti porta alla documentazione sull'uso e sulla creazione di plugin.
 
 ### Repl
 
-Ottieni un Node.js REPL (shell interattiva) con il contesto del tuo ambiente del tuo ambiente Gatsby:
+Ottieni un REPL Node.js (shell interattiva) con il contesto del tuo ambiente Gatsby:
 
 `gatsby repl`
 
@@ -205,4 +205,4 @@ Per ulteriori informazioni, controlla la [documentazione Gatsby REPL](/docs/gats
 
 ### Disabilitare l'output colorato
 
-In aggiunta all'opzione esplicita `--no-color` option, il CLI considera la presenza della variabile d'ambiente `NO_COLOR` (vedi [no-color.org](https://no-color.org/)).
+In aggiunta all'opzione esplicita `--no-color`, il CLI considera la presenza della variabile d'ambiente `NO_COLOR` (vedi [no-color.org](https://no-color.org/)).
