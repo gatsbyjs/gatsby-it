@@ -3,13 +3,13 @@ title: Commands (Gatsby CLI)
 tableOfContentsDepth: 2
 ---
 
-Il Gatsby Command Line Tool (CLI) è il principale strumento per installare e far funzionare una applicazione Gatsby e per l'utilizzo di funzionalità come l'esecuzione di un server di sviluppo e la creazione della tua applicazione Gatsby per il deployment.
+La Gatsby Command Line Interface (CLI) è il principale strumento per installare e far funzionare una applicazione Gatsby e per l'utilizzo di funzionalità come l'esecuzione di un server di sviluppo e la creazione della tua applicazione Gatsby per il deployment.
 
 _Forniamo una documentazione simile disponibile con il gatsby-cli [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md), e il nostro [cheat sheet](/docs/cheat-sheet/) contiene tutti i principali comandi CLI pronti per essere stampati._
 
 ## Come usare gatsby-cli
 
-Il Gatsby CLI (`gatsby-cli`) è costituito da un eseguibile che può essere utilizzato globalmente. Il Gatsby CLI è disponibile tramite [npm](https://www.npmjs.com/) e può essere installato globalmente eseguendo `npm install -g gatsby-cli` per utilizzarlo localmente.
+La Gatsby CLI (`gatsby-cli`) è costituito da un eseguibile che può essere utilizzato globalmente. La Gatsby CLI è disponibile tramite [npm](https://www.npmjs.com/) e può essere installato globalmente eseguendo `npm install -g gatsby-cli` per utilizzarlo localmente.
 
 Esegui `gatsby --help` per l'aiuto completo.
 
@@ -54,7 +54,7 @@ gatsby new my-awesome-site
 gatsby new my-awesome-blog-site https://github.com/gatsbyjs/gatsby-starter-blog
 ```
 
-- Se ometti entrambi gli argomenti, il CLI eseguirà una shell intereattiva che richiederà questi input:
+- Se ometti entrambi gli argomenti, la CLI eseguirà una shell intereattiva che richiederà questi input:
 
 ```shell
 gatsby new
@@ -205,7 +205,7 @@ Per ulteriori informazioni, controlla la [documentazione Gatsby REPL](/docs/gats
 
 ### Disabilitare l'output colorato
 
-In aggiunta all'opzione esplicita `--no-color`, il CLI considera la presenza della variabile d'ambiente `NO_COLOR` (vedi [no-color.org](https://no-color.org/)).
+In aggiunta all'opzione esplicita `--no-color`, la CLI considera la presenza della variabile d'ambiente `NO_COLOR` (vedi [no-color.org](https://no-color.org/)).
 
 ## Come cambiare il tuo package manager predefinito per il tuo prossimo progetto?
 
@@ -217,9 +217,9 @@ Which package manager would you like to use ? › - Use arrow-keys. Return to su
    npm
 ```
 
-Una volta fatta la scelta, il CLI non ti chiederà piuù la tua preferenza per ogni progetto successivo. 
+Una volta fatta la scelta, la CLI non ti chiederà più la tua preferenza per ogni progetto successivo. 
 
-Se la vuoi cambiare per il prossimo progetto devi modificare il file di configurazione creato automaticamente dal CLI.
+Se la vuoi cambiare per il prossimo progetto devi modificare il file di configurazione creato automaticamente dalla CLI.
 Questo file è disponibile sul tuo sistema qui: `~/.config/gatsby/config.json`
 
 Al suo interno vedrai qualcosa del genere.
