@@ -3,7 +3,12 @@ title: Glossario
 disableTableOfContents: true
 ---
 
-Se sei nuovo di Gatsby ci possono essere molte parole da imparare. Questo glossario mira a darti una panoramica generale dei termini più comuni e del loro significato per dei siti Gatsby.
+# <<<<<<< HEAD
+
+import HorizontalNavList from "../../www/src/components/horizontal-nav-list.js"
+
+> > > > > > > translation: glossary
+> > > > > > > Se sei nuovo di Gatsby ci possono essere molte parole da imparare. Questo glossario mira a darti una panoramica generale dei termini più comuni e del loro significato per dei siti Gatsby.
 
 <HorizontalNavList
 items={"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")}
@@ -75,10 +80,13 @@ A component can include components within it. In fact, [pages](#page) and [templ
 ### Config
 
 Il file di configurazione, `gatsby-config.js`, contiene le informazioni per Gatsby sul tuo sito web. Un'opzione comune impostata in config sono i metadati del tuo sito che servono si meta tag per il SEO.
+<<<<<<< HEAD
 
 ### [Continuous Deployment](/docs/glossary/continuous-deployment)
 
-Continuous deployment (CD) automates the process of releasing changes to your project. A continuous deployment workflow automatically builds and tests your project, and publishes your changes only when they pass the required tests.
+# Continuous deployment (CD) automates the process of releasing changes to your project. A continuous deployment workflow automatically builds and tests your project, and publishes your changes only when they pass the required tests.
+
+> > > > > > > translation: glossary
 
 ### CSS
 
@@ -97,10 +105,13 @@ Un database è una collezione di dati o contenuti strutturati. Spesso un [CMS](#
 ### Decoupled
 
 Disaccoppiamento indica la separazione di differenti problemi. In [Gatsby](#gatsby) il più delle volte significa il disaccoppiamento del [frontend](#frontend) dal [backend](#backend), tipo usando [Decoupled Drupal](https://dri.es/how-to-decouple-drupal-in-2019) o [Headless WordPress](https://www.smashingmagazine.com/2018/10/headless-wordpress-decoupled/).
+<<<<<<< HEAD
 
 ### [Decoupled Drupal](/docs/glossary/decoupled-drupal)
 
-Decoupling refers to the practice of using Drupal as a [headless CMS](#headless-cms). A decoupled Drupal instance functions as a content API that returns JSON for your [frontend](#frontend) to consume.
+# Decoupling refers to the practice of using Drupal as a [headless CMS](#headless-cms). A decoupled Drupal instance functions as a content API that returns JSON for your [frontend](#frontend) to consume.
+
+> > > > > > > translation: glossary
 
 ### Deploy
 
@@ -155,14 +166,25 @@ Un [query](#query) language che permette ti recuperare i dati per il tuo sito we
 ### HTML
 
 Un linguaggio di markup che ogni browser web è in grado di capire. Significa Hypertext Markup Language. [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) fornisce al tuo contenuto web una struttura informativa universale, definendo cose come titoli, paragrafi e altro. È anche la chiave per creare un sito web accessibile.
+<<<<<<< HEAD
 
 ### [Headless CMS](/docs/glossary/headless-cms)
 
+=======
+
+> > > > > > > translation: glossary
+
 Un [CMS](#cms) che gestisce solo la parte di backoffice dei contenuti invece di gestire sia frontend che backend. Questo tipo di setup viene anche chiamato [Decoupled](#decoupled).
+
+<<<<<<< HEAD
 
 ### [Headless WordPress](/docs/glossary/headless-wordpress)
 
-The practice of using JSON returned from the WordPress REST API as a [headless CMS](#headless-cms). It allows you to use WordPress to write and edit content that can be consumed by any client capable of parsing JSON.
+# The practice of using JSON returned from the WordPress REST API as a [headless CMS](#headless-cms). It allows you to use WordPress to write and edit content that can be consumed by any client capable of parsing JSON.
+
+Un [CMS](#cms) che gestisce solo la parte di backoffice dei contenuti invece di gestire sia frontend che backend. Questo tipo di setup viene anche chiamato [Decoupled](#decoupled).
+
+> > > > > > > translation: glossary
 
 ### Hosting
 
