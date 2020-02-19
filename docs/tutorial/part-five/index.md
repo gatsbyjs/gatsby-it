@@ -14,7 +14,12 @@ In questo tutorial imparerai come inserire i dati nel tuo sito Gatsby usando Gra
 
 GraphiQL è l'ambiente di sviluppo integrato (IDE) di GraphQL. È un potente (oltre che fantastico) strumento che userai spesso durante la creazione di siti con Gatsby.
 
+<<<<<<< HEAD
 Quando il server di sviluppo è in esecuzione puoi accedervi all'indirizzo <http://localhost:8000/___graphql>.
+=======
+You can access it when your site's development server is running—normally at
+`http://localhost:8000/___graphql`.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="/graphiql-explore.mp4"></source>
@@ -93,7 +98,12 @@ Puoi inoltre aggiungere altri campi usando la scorciatoia di autocompletamento (
 
 ![filesystem-autocomplete](filesystem-autocomplete.png)
 
+<<<<<<< HEAD
 Prova ad aggiungere un numero di campi alla tua query, premendo ogni volta <kbd>Ctrl + Enter</kbd> per eseguire di nuovo il comando. Vedrai i risultati di query aggiornati:
+=======
+Try adding a number of fields to your query, press <kbd>Ctrl + Enter</kbd>
+each time to re-run the query. You'll see the updated query results:
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ![allfile-query](allfile-query.png)
 
@@ -201,7 +211,11 @@ export const query = graphql`
 `;
 ```
 
+<<<<<<< HEAD
 Ora visita [http://localhost:8000/my-files](http://localhost:8000/my-files)… 😲
+=======
+And now visit `http://localhost:8000/my-files`… 😲
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ![my-files-page](my-files-page.png)
 
