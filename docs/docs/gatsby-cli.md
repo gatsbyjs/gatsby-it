@@ -27,7 +27,7 @@ Puoi anche utilizzare la variante script di questi comandi, `package.json`, tipi
 
 ### `new`
 
-```
+```shell
 gatsby new [<site-name> [<starter-url>]]
 ```
 
