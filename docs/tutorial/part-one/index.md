@@ -165,7 +165,11 @@ export default () => (
 )
 ```
 
+<<<<<<< HEAD
 2.  Vai su http://localhost:8000/about/.
+=======
+2.  Navigate to `http://localhost:8000/about/`
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ![New about page](05-about-page.png)
 
@@ -230,7 +234,11 @@ Ora dovresti di nuovo vedere l'intestazione “About Gatsby”!
 
 ### Cosa sono i “props”?
 
+<<<<<<< HEAD
 Abbiamo precedentemente definito i componenti React come pezzi di codice riutilizzabili che descrivono una UI. Per rendere dinamici questi pezzi riutilizzabili devi essere in grado di equipaggiarli con dati differenti. Puoi farlo con degli input chiamati “props". I props sono proprietà (sufficientemente specifiche) fornite ai componenti React.
+=======
+Earlier, you defined React components as reusable pieces of code describing a UI. To make these reusable pieces dynamic you need to be able to supply them with different data. You do that with input called "props". Props are (appropriately enough) properties supplied to React components.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 In `about.js` hai passato un prop `headerText` con il volore di `"About Gatsby"` al sotto-componente importato `Header`:
 
@@ -328,16 +336,22 @@ Dopo aver salvato il file, dovresti vedere la pagina dei contatti e dovresti ess
 
 <video controls="controls" loop="true">
   <source type="video/mp4" src="./10-linking-between-pages.mp4"></source>
-  <p>Sorry! You browser doesn't support this video.</p>
+  <p>Sorry! Your browser doesn't support this video.</p>
 </video>
 
 Il componente Gatsby `<Link />` serve per creare collegamenti tra le pagine del tuo sito. Per i link a pagine che non sono gestite dal tuo sito Gatsby, puoi usare il tipico tag HTML `<a>`.
 
 ## Distribuire un sito Gatsby
 
+<<<<<<< HEAD
 Gatsby.js è un _moderno generatore di siti_, e questo significa che non ci sono server da installare o complicati database da distribuire. Invece, il comando Gatsby `build` crea una directory di file statici HTML e JavaScript che è possibili distribuire con un servizio di hosting per siti statici.
 
 Prova a usare [Surge](http://surge.sh/) per distribuire il tuo primo sito web Gatsby. Surge è uno dei tanti "host di siti statici" che permette di distribuire i siti web creati con Gatsby.
+=======
+Gatsby.js is a _modern site generator_, which means there are no servers to set up or complicated databases to deploy. Instead, the Gatsby `build` command produces a directory of static HTML and JavaScript files which you can deploy to a static site hosting service.
+
+Try using [Surge](http://surge.sh/) for deploying your first Gatsby website. Surge is one of many "static site hosts" which makes it possible to deploy Gatsby sites.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Se non hai precedentemente installato &amp; configurato Surge, apri una nuova finestra del terminale e installa gli strumenti della riga di comando:
 
@@ -368,7 +382,13 @@ Puoi quindi distribuire il tuo sito, pubblicando i file generati su surge.sh
 surge public/
 ```
 
+<<<<<<< HEAD
 Una volta che il processo sarà concluso, dovresti vedere nel terminale qualcosa del genere:
+=======
+> Note that you will have to press the `enter` key after you see the `domain: some-name.surge.sh` information on your command-line interface.
+
+Once this finishes running, you should see in your terminal something like:
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ![Screenshot of publishing Gatsby site with Surge](surge-deployment.png)
 

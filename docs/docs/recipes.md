@@ -31,27 +31,27 @@ See [docs templates](/docs/docs-templates/) in the contributing docs for more he
 
 Stai cercando una via di mezzo tra dei [tutorial completi](/tutorial/) e lo spulciare tra la [documentazione](/docs/)? Ecco un libro di ricette guida su come creare cose, alla Gatsby.
 
+<<<<<<< HEAD
 ## 1. Pagine e Layouts
 
 ### Struttura del progetto
 
 All'interno di un progetto Gatsby, puoi vedere alcune o tutte delle seguenti cartelle o file:
+=======
+## [1. Pages and layouts](/docs/recipes/pages-layouts)
 
-```
-|-- /.cache
-|-- /plugins
-|-- /public
-|-- /src
-    |-- /pages
-    |-- /templates
-    |-- html.js
-|-- /static
-|-- gatsby-config.js
-|-- gatsby-node.js
-|-- gatsby-ssr.js
-|-- gatsby-browser.js
-```
+Add pages to your Gatsby site, and use layouts to manage common page elements.
 
+- [Project structure](/docs/recipes/pages-layouts#project-structure)
+- [Creating pages automatically](/docs/recipes/pages-layouts#creating-pages-automatically)
+- [Linking between pages](/docs/recipes/pages-layouts#linking-between-pages)
+- [Creating a layout component](/docs/recipes/pages-layouts#creating-a-layout-component)
+- [Creating pages programmatically with createPage](/docs/recipes/pages-layouts#creating-pages-programmatically-with-createpage)
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+
+## [2. Styling with CSS](/docs/recipes/styling-css)
+
+<<<<<<< HEAD
 Alcuni degni di nota con la loro definizione:
 
 - `gatsby-config.js` — configura le opzioni di un sito Gatsby, come i metadati per il titolo di progetto, la descrizione, i plugin, ecc.
@@ -2180,34 +2180,51 @@ Contenuto dell'articolo...
 ```
 
 2. verifica che un unico identificativo (uno slug in questo esempio) sia passato al context quando `createPages` viene chiamato in `gatsby-node.js`, esso verrà passato più tardi ad una query GraphQL nel component Layout
+=======
+There are so many ways to add styles to your website; Gatsby supports almost every possible option, through official and community plugins.
 
-```js:title=gatsby-node.js
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+- [Using global CSS files without a Layout component](/docs/recipes/styling-css#using-global-css-files-without-a-layout-component)
+- [Using global styles in a layout component](/docs/recipes/styling-css#using-global-styles-in-a-layout-component)
+- [Using Styled Components](/docs/recipes/styling-css#using-styled-components)
+- [Using CSS Modules](/docs/recipes/styling-css#using-css-modules)
+- [Using Sass/SCSS](/docs/recipes/styling-css#using-sassscss)
+- [Adding a Local Font](/docs/recipes/styling-css#adding-a-local-font)
+- [Using Emotion](/docs/recipes/styling-css#using-emotion)
+- [Using Google Fonts](/docs/recipes/styling-css#using-google-fonts)
 
-  // query for all markdown
+## [3. Working with starters](/docs/recipes/working-with-starters)
 
-  result.data.allMdx.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve(`./src/components/markdown-layout.js`),
-      // highlight-start
-      context: {
-        slug: node.fields.slug,
-      },
-      // highlight-end
-    })
-  })
-}
-```
+[Starters](/docs/starters/) are boilerplate Gatsby sites maintained officially, or by the community.
 
+- [Using a starter](/docs/recipes/working-with-starters#using-a-starter)
+
+## [4. Working with themes](/docs/recipes/working-with-themes)
+
+A Gatsby theme lets you centralize the look-and-feel of your site. You can seamlessly update a theme, compose themes together, and even swap out one compatible theme for another.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+
+- [Creating a new site using a theme](/docs/recipes/working-with-themes#creating-a-new-site-using-a-theme)
+- [Creating a new site using a theme starter](/docs/recipes/working-with-themes#creating-a-new-site-using-a-theme-starter)
+- [Building a new theme](/docs/recipes/working-with-themes#building-a-new-theme)
+
+## [5. Sourcing data](/docs/recipes/sourcing-data)
+
+Pull data from multiple locations, like the filesystem or database, into your Gatsby site.
+
+<<<<<<< HEAD
 3. Adesso importa `Img` da `gatsby-image`, e `graphql` da `gatsby` dentro il componente template, scrivi una [pageQuery](/docs/page-query/) per recuperare i dati dell'immagine usando lo `slug` passato e passa questi dati al componente `<Img />`:
+=======
+- [Adding data to GraphQL](/docs/recipes/sourcing-data#adding-data-to-graphql)
+- [Sourcing Markdown data for blog posts and pages with GraphQL](/docs/recipes/sourcing-data#sourcing-markdown-data-for-blog-posts-and-pages-with-graphql)
+- [Sourcing from WordPress](/docs/recipes/sourcing-data#sourcing-from-wordpress)
+- [Sourcing data from Contentful](/docs/recipes/sourcing-data#sourcing-data-from-contentful)
+- [Pulling data from an external source and creating pages without GraphQL](/docs/recipes/sourcing-data#pulling-data-from-an-external-source-and-creating-pages-without-graphql)
+- [Sourcing content from Drupal](/docs/recipes/sourcing-data#sourcing-content-from-drupal)
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
-```jsx:title=markdown-layout.jsx
-import React from "react"
-import { graphql } from "gatsby" // highlight-line
-import Img from "gatsby-image" // highlight-line
+## [6. Querying data](/docs/recipes/querying-data)
 
+<<<<<<< HEAD
 export default ({ children, data }) => (
   <main>
     // highlight-start
@@ -2219,27 +2236,21 @@ export default ({ children, data }) => (
     {children}
   </main>
 )
+=======
+Gatsby lets you access your data across all sources using a single GraphQL interface.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
-// highlight-start
-export const pageQuery = graphql`
-  query PostQuery($slug: String) {
-    markdown: mdx(fields: { slug: { eq: $slug } }) {
-      id
-      frontmatter {
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
-// highlight-end
-```
+- [Querying data with a Page Query](/docs/recipes/querying-data#querying-data-with-a-page-query)
+- [Querying data with the StaticQuery Component](/docs/recipes/querying-data#querying-data-with-the-staticquery-component)
+- [Querying data with the useStaticQuery hook](/docs/recipes/querying-data/#querying-data-with-the-usestaticquery-hook)
+- [Limiting with GraphQL](/docs/recipes/querying-data#limiting-with-graphql)
+- [Sorting with GraphQL](/docs/recipes/querying-data#sorting-with-graphql)
+- [Filtering with GraphQL](/docs/recipes/querying-data#filtering-with-graphql)
+- [GraphQL Query Aliases](/docs/recipes/querying-data#graphql-query-aliases)
+- [GraphQL Query Fragments](/docs/recipes/querying-data#graphql-query-fragments)
+- [Querying data client-side with fetch](/docs/recipes/querying-data#querying-data-client-side-with-fetch)
 
+<<<<<<< HEAD
 4. Lancia `gatsby develop`, che genererà le immagini per ogni file proveniente dal filesystem
 
 #### Ulteriori risorse
@@ -2251,9 +2262,22 @@ export const pageQuery = graphql`
 - [Approfondisci come lavorare con le immagini in Gatsby](/docs/working-with-images/)
 
 ## 8. Trasformare i dati
+=======
+## [7. Working with images](/docs/recipes/working-with-images)
+
+Access images as static resources, or automate the process of optimizing them through powerful plugins.
+
+- [Import an image into a component with webpack](/docs/recipes/working-with-images#import-an-image-into-a-component-with-webpack)
+- [Reference an image from the static folder](/docs/recipes/working-with-images#reference-an-image-from-the-static-folder)
+- [Optimizing and querying local images with gatsby-image](/docs/recipes/working-with-images#optimizing-and-querying-local-images-with-gatsby-image)
+- [Optimizing and querying images in post frontmatter with gatsby-image](/docs/recipes/working-with-images#optimizing-and-querying-images-in-post-frontmatter-with-gatsby-image)
+
+## [8. Transforming data](/docs/recipes/transforming-data)
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Trasformare i dati in Gatsby è fatto tramite i plugin. I Transformer plugin prendono i dati recuperati da un source plugin, e li processa in qualcosa di più usabile (es. il JSON in oggetti JavaScript, e altro).
 
+<<<<<<< HEAD
 ### Trasformare il Markdown in HTML
 
 Il plugin `gatsby-transformer-remark` può trasformare i file Markdown in HTML.
@@ -2306,9 +2330,16 @@ export const query = graphql`
 - Consulta i transformer plugin disponibili nella [libreria di plugin di Gatsby](/plugins/?=transformer)
 
 ## 9. Rilascia il tuo sito
+=======
+- [Transforming Markdown into HTML](/docs/recipes/transforming-data#transforming-markdown-into-html)
+- [Transforming images into grayscale using GraphQL](/docs/recipes/transforming-data#transforming-images-into-grayscale-using-graphql)
+
+## [9. Deploying your site](/docs/recipes/deploying-your-site)
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Showtime. Una volta che sei soddisfatto del tuo sito, sei pronto per metterlo online!
 
+<<<<<<< HEAD
 ### Preparazioni per il rilascio
 
 #### Prerequisiti
@@ -2408,3 +2439,8 @@ Usa la [CLI di Now](https://zeit.co/download) per il rilascio della tua applicaz
 #### Ulteriori risorse
 
 - [Rilascio su ZEIT Now](/docs/deploying-to-zeit-now/)
+=======
+- [Preparing for deployment](/docs/recipes/deploying-your-site#preparing-for-deployment)
+- [Deploying to Netlify](/docs/recipes/deploying-your-site#deploying-to-netlify)
+- [Deploying to ZEIT Now](/docs/recipes/deploying-your-site#deploying-to-zeit-now)
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
