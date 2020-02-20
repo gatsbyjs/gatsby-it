@@ -1,35 +1,36 @@
 ---
-title: Gatsby.js Documentation
+title: Documentazione di Gatsby.js
 disableTableOfContents: true
 ---
 
 import EmailCaptureForm from "../../www/src/components/email-capture-form"
 
-Gatsby is a blazing fast modern site generator for React.
+Gatsby è un velocissimo e moderno generatore di siti per React.
 
-## Get Started
+## Per Iniziare
 
-There are two main ways to get started with Gatsby:
+Ci sono due modi per iniziare con Gatsby:
 
-1. [Tutorial](/tutorial/): Step-by-step instructions on how to install Gatsby and start a project: written for people without Gatsby or web development experience, though these learning resources have helped developers of all skill levels.
-2. [Quick start](/docs/quick-start): One page summary of how to install Gatsby and start a new project.
+1. [Tutorial](/tutorial/): Istruzioni passo-passo su come installare Gatsby e iniziare un progetto: scritto per persone senza esperienza con Gatsby o lo sviluppo web, anche se queste guide hanno aiutato sviluppatori di ogni tipo.
+2. [Guida Rapida](/docs/quick-start): Una pagina di riepilogo su come installare Gatsby e iniziare un nuovo progetto
 
-## Go further
+## Andando oltre
 
-1. [Recipes](/docs/recipes/): Find some quick answers for how to accomplish some specific, common tasks with Gatsby.
-2. Choose your own adventure and peruse the various sections of the Gatsby docs:
+1. [Ricette](/docs/recipes/): Qui trovi alcune risposte veloci per capire come eseguire alcune attività specifiche o comuni con Gatsby.
 
-   - [Reference Guides](/docs/guides/): Learn about the many different topics around building with Gatsby, like sourcing data, deployment, and more.
-   - [Gatsby API Reference](/docs/api-reference/): Learn more about Gatsby APIs and configuration.
-   - [Releases & Migration](/docs/releases-and-migration/): Find release notes and guides for migration between major versions.
-   - [Conceptual Guide](/docs/conceptual-guide/): Read high-level overviews of the Gatsby approach.
-   - [Gatsby Internals](/docs/gatsby-internals/): Dig into how Gatsby works behind the scenes.
-   - [Using Gatsby Professionally](/docs/using-gatsby-professionally/): Learn tips and tricks for how to explain Gatsby to others at work, so that you have more opportunities to work with Gatsby professionally.
+2. Scegli la tua avventura e consulta le varie sezioni della documentazione di Gatsby:
 
-3. Check out the [Ecosystem](/ecosystem/) libraries for Gatsby starters and plugins, as well as external community resources.
+   - [Guide di riferimento](/docs/guides/): Scopri diversi argomenti su come usare Gatsby, come recuperare i dati, il rilascio e altro ancora.
+   - [Riferimenti alle Gatsby API](/docs/api-reference/): Scopri le Gatsby APIs e le configurazioni.
+   - [Rilasci e Migrazioni](/docs/releases-and-migration/): Trova le note di rilascio e le guide per la migrazione tra le versioni principali.
+   - [Guida concettuale](/docs/conceptual-guide/): Leggi panoramiche di alto livello dell'approccio Gatsby.
+   - [Dietro le quinte di Gatsby](/docs/gatsby-internals/): Scopri come Gatsby lavora dietro le quinte.
+   - [Usa Gatsby in modo Professionale](/docs/using-gatsby-professionally/): Impara trucchi e consigli su come spiegare Gatsby a chi lavora con te, in questo modo puoi avere più possibilità di usare Gatsby in ambito lavorativo.
 
-## Start contributing
+3. Dai un occhio alle librerie dell'[Ecosistema](/ecosystem/) di Gatsby per starter e plugin, così come le risorse esterna della comunità.
 
-Visit the [Contributing](/contributing/) section to find guides on the Gatsby community, code of conduct, and how to get started contributing to Gatsby.
+## Dai il tuo contributo
 
-<EmailCaptureForm signupMessage="Want to keep up with the latest tips &amp; tricks? Subscribe to our newsletter!" />
+Visita la sezione [Contributi](/contributing/) per trovare guide sulla comunità di Gatsby, il codice di condotta e come iniziare a dare il tuo contributo a Gatsby.
+
+<EmailCaptureForm signupMessage="Vuoi rimanere aggiornato sugli ultimi trucchi e consigli? Iscriviti alla nostra newsletter!" />

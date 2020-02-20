@@ -37,20 +37,7 @@ Stai cercando una via di mezzo tra dei [tutorial completi](/tutorial/) e lo spul
 
 All'interno di un progetto Gatsby, puoi vedere alcune o tutte delle seguenti cartelle o file:
 
-```
-|-- /.cache
-|-- /plugins
-|-- /public
-|-- /src
-    |-- /pages
-    |-- /templates
-    |-- html.js
-|-- /static
-|-- gatsby-config.js
-|-- gatsby-node.js
-|-- gatsby-ssr.js
-|-- gatsby-browser.js
-```
+## [2. Styling with CSS](/docs/recipes/styling-css)
 
 Alcuni degni di nota con la loro definizione:
 
@@ -2181,32 +2168,17 @@ Contenuto dell'articolo...
 
 2. verifica che un unico identificativo (uno slug in questo esempio) sia passato al context quando `createPages` viene chiamato in `gatsby-node.js`, esso verrà passato più tardi ad una query GraphQL nel component Layout
 
-```js:title=gatsby-node.js
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+- [Creating a new site using a theme](/docs/recipes/working-with-themes#creating-a-new-site-using-a-theme)
+- [Creating a new site using a theme starter](/docs/recipes/working-with-themes#creating-a-new-site-using-a-theme-starter)
+- [Building a new theme](/docs/recipes/working-with-themes#building-a-new-theme)
 
-  // query for all markdown
+## [5. Sourcing data](/docs/recipes/sourcing-data)
 
-  result.data.allMdx.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve(`./src/components/markdown-layout.js`),
-      // highlight-start
-      context: {
-        slug: node.fields.slug,
-      },
-      // highlight-end
-    })
-  })
-}
-```
+Pull data from multiple locations, like the filesystem or database, into your Gatsby site.
 
 3. Adesso importa `Img` da `gatsby-image`, e `graphql` da `gatsby` dentro il componente template, scrivi una [pageQuery](/docs/page-query/) per recuperare i dati dell'immagine usando lo `slug` passato e passa questi dati al componente `<Img />`:
 
-```jsx:title=markdown-layout.jsx
-import React from "react"
-import { graphql } from "gatsby" // highlight-line
-import Img from "gatsby-image" // highlight-line
+## [6. Querying data](/docs/recipes/querying-data)
 
 export default ({ children, data }) => (
   <main>
@@ -2220,25 +2192,15 @@ export default ({ children, data }) => (
   </main>
 )
 
-// highlight-start
-export const pageQuery = graphql`
-  query PostQuery($slug: String) {
-    markdown: mdx(fields: { slug: { eq: $slug } }) {
-      id
-      frontmatter {
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
-// highlight-end
-```
+- [Querying data with a Page Query](/docs/recipes/querying-data#querying-data-with-a-page-query)
+- [Querying data with the StaticQuery Component](/docs/recipes/querying-data#querying-data-with-the-staticquery-component)
+- [Querying data with the useStaticQuery hook](/docs/recipes/querying-data/#querying-data-with-the-usestaticquery-hook)
+- [Limiting with GraphQL](/docs/recipes/querying-data#limiting-with-graphql)
+- [Sorting with GraphQL](/docs/recipes/querying-data#sorting-with-graphql)
+- [Filtering with GraphQL](/docs/recipes/querying-data#filtering-with-graphql)
+- [GraphQL Query Aliases](/docs/recipes/querying-data#graphql-query-aliases)
+- [GraphQL Query Fragments](/docs/recipes/querying-data#graphql-query-fragments)
+- [Querying data client-side with fetch](/docs/recipes/querying-data#querying-data-client-side-with-fetch)
 
 4. Lancia `gatsby develop`, che genererà le immagini per ogni file proveniente dal filesystem
 

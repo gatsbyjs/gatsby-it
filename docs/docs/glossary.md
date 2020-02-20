@@ -3,8 +3,6 @@ title: Glossario
 disableTableOfContents: true
 ---
 
-import HorizontalNavList from "../../www/src/components/horizontal-nav-list.js"
-
 Se sei nuovo di Gatsby ci possono essere molte parole da imparare. Questo glossario mira a darti una panoramica generale dei termini più comuni e del loro significato per dei siti Gatsby.
 
 <HorizontalNavList
@@ -78,6 +76,10 @@ A component can include components within it. In fact, [pages](#page) and [templ
 
 Il file di configurazione, `gatsby-config.js`, contiene le informazioni per Gatsby sul tuo sito web. Un'opzione comune impostata in config sono i metadati del tuo sito che servono si meta tag per il SEO.
 
+### [Continuous Deployment](/docs/glossary/continuous-deployment)
+
+Continuous deployment (CD) automates the process of releasing changes to your project. A continuous deployment workflow automatically builds and tests your project, and publishes your changes only when they pass the required tests.
+
 ### CSS
 
 [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) sta per Cascading Style Sheets, ed è una parte importante della Piattaforma Web assieme a [HTML](#html) e [JavaScript](#javascript). CSS è il linguaggio per lo stylining delle pagine web progettato per essere il più possibile retro compatibile. Appena una nuova funzionalità viene rilasciata agli utenti finali, i [CSS parser](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#CSS_parsing) possono ignorare le funzionalità non più supportate e migliorare con le proprietà che supporta. Il CSS utilizza il _cascading_, fondamentale per lo styling con nuove tecniche tipo [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement) fornendo allo stesso tempo un fallback per i browser più vecchi. Gatsby supporta molti [approcci allo styling](/docs/styling/), inclusi i normali file CSS, i CSS Module e CSS-in-JS.
@@ -95,6 +97,10 @@ Un database è una collezione di dati o contenuti strutturati. Spesso un [CMS](#
 ### Decoupled
 
 Disaccoppiamento indica la separazione di differenti problemi. In [Gatsby](#gatsby) il più delle volte significa il disaccoppiamento del [frontend](#frontend) dal [backend](#backend), tipo usando [Decoupled Drupal](https://dri.es/how-to-decouple-drupal-in-2019) o [Headless WordPress](https://www.smashingmagazine.com/2018/10/headless-wordpress-decoupled/).
+
+### [Decoupled Drupal](/docs/glossary/decoupled-drupal)
+
+Decoupling refers to the practice of using Drupal as a [headless CMS](#headless-cms). A decoupled Drupal instance functions as a content API that returns JSON for your [frontend](#frontend) to consume.
 
 ### Deploy
 
@@ -140,7 +146,7 @@ L'interfaccia pubblica del tuo sito web o app, realizzata usando tecnologie web:
 
 Gastby è un moderno framework per siti web che mette le performance in primo piano in ogni sito web o app, sfruttando le tecnologie web più recenti come [React](#react), [GraphQL](#graphql) e [JavaScript](#javascript) moderno. Gatsby rende semplice la creazione di un esperienza web super veloce senza bisogno di diventare un esperto di performance.
 
-### GraphQL
+### [GraphQL](/docs/glossary/graphql)
 
 Un [query](#query) language che permette ti recuperare i dati per il tuo sito web o app. È una una [interfaccia che Gatsby usa](/docs/graphql/) per gestire i dati del sito.
 
@@ -150,9 +156,13 @@ Un [query](#query) language che permette ti recuperare i dati per il tuo sito we
 
 Un linguaggio di markup che ogni browser web è in grado di capire. Significa Hypertext Markup Language. [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) fornisce al tuo contenuto web una struttura informativa universale, definendo cose come titoli, paragrafi e altro. È anche la chiave per creare un sito web accessibile.
 
-### Headless CMS
+### [Headless CMS](/docs/glossary/headless-cms)
 
 Un [CMS](#cms) che gestisce solo la parte di backoffice dei contenuti invece di gestire sia frontend che backend. Questo tipo di setup viene anche chiamato [Decoupled](#decoupled).
+
+### [Headless WordPress](/docs/glossary/headless-wordpress)
+
+The practice of using JSON returned from the WordPress REST API as a [headless CMS](#headless-cms). It allows you to use WordPress to write and edit content that can be consumed by any client capable of parsing JSON.
 
 ### Hosting
 
@@ -168,9 +178,13 @@ Una volta che è il sito è stato [generato](#build) da Gatsby e caricato in un 
 
 ## I
 
+### Inference
+
+As part of its data layer and [build](#build) process, Gatsby will automatically **infer** a [schema](#schema), or type-based structure, based on available data sources (e.g. Markdown file nodes, WordPress posts, etc.). More control can be gained over this structure by using Gatsby's [Schema Customization API](/docs/schema-customization/).
+
 ## J
 
-### JAMStack
+### [JAMStack](/docs/glossary/jamstack)
 
 Il termine JAMStack si riferisce ad una moderna architettura web composta da [JavaScript](#javascript), [API](#api), e il markup ([HTML](#html)). Da [JAMStack.org](https://jamstack.org): "È un nuovo modo di creare siti web e applicazioni che offre migliori prestazioni, maggior sicurezza, un basso costo sulla scalabilità e una miglior esperienza di sviluppo"
 
@@ -210,7 +224,7 @@ Un sistema per scrivere contenuto HTML usando testo semplice, facendo uso di car
 
 Gastby usa dei [data nodes](/docs/node-interface/) per rappresentare una singola porzione di dato. Una sorgente di dati creerà nodi multipli.
 
-### Node.js
+### [Node.js](/docs/glossary/node)
 
 Un programma che ti permette di eseguire [JavaScript](#javascript) sul tuo computer. Node è il motore di Gatsby.
 
@@ -256,7 +270,7 @@ Il processo per la richiesta specifica di dati da qualcosa. Con Gatsby in genere
 
 ## R
 
-### React
+### [React](/docs/glossary/react)
 
 Una libreria (scritta con [JavaScript](#javascript)) per creare interfacce utente. È un framework che usa [Gatsby](#gatsby) per generare le pagine e strutturare il contenuto.
 
@@ -302,6 +316,10 @@ Gatsby [genera](#build) una versione statica della tua pagina che può essere fa
 
 Fa riferimento anche alla cartella `/static` che è automaticamente copiata dentro `/public` ad ogni [generazione](#build) per i file per i quali non serve che vengano processati da Gatsby ma che necessitano di essere pubblicati.
 
+### [Static Site Generator](/docs/glossary/static-site-generator)
+
+A software application that creates HTML pages from templates or [components](#component) and a given content source.
+
 ## T
 
 ### Template
@@ -326,7 +344,7 @@ La UI fa riferimento alla User Interface (interfaccia utente). Nel campo dell'in
 
 ## W
 
-### Webpack
+### [webpack](/docs/glossary/webpack)
 
 Un'applicazione [JavaScript] (# javascript) utilizzata da Gatsby generare gli artefatti del tuo sito web. Avviene automaticamente durante la [generazione](# build).
 
