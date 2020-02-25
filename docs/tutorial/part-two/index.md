@@ -248,11 +248,7 @@ import Container from "../components/container"
 console.log(styles)
 ```
 
-<<<<<<< HEAD
-Il codice della `console.log(styles)` farà il log dell'import risultante così da permetterti di vedere il risultato del tuo file `./about-css-modules.module.css` elaborato. Se apri la console dello sviluppatore (usando ad esempio gli strumenti da sviluppatore di Firefox o Chrome) nel tuo browser, vedrai:
-=======
-The `console.log(styles)` code will log the resulting import so you can see the result of your processed `./about-css-modules.module.css` file. If you open the developer console (using e.g. Firefox or Chrome's developer tools, often by the F12 key) in your browser, you'll see:
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Il codice della `console.log(styles)` farà il log dell'import risultante così da permetterti di vedere il risultato del tuo file `./about-css-modules.module.css` elaborato. Se apri la console dello sviluppatore (usando ad esempio gli strumenti da sviluppatore di Firefox o Chrome, di solito con il tasto F12) nel tuo browser, vedrai:
 
 ![Importa il risultato del CSS Module nella console](css-modules-console.png)
 

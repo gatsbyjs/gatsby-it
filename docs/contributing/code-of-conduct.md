@@ -28,11 +28,7 @@ Esempi di comportamento inaccettabile:
 
 I mainteiner del progetto sono responsabili di chiarire i principi di comportamento accettabile, e di prendere provvedimenti appropriati e imparziali in risposta a qualunque istanza di comportamento inaccettabile.
 
-<<<<<<< HEAD
-I mainteiner del progetto hanno il diritto e la responsabilità di rimuovere, modificare, o rifiutare commenti, commit, codice, modifiche al wiki, e altri contributi che non siano in linea con questo codice di condotta, o di bannare in via temporanea o permanente qualunque collaboratore per altri comportamenti che ritengano inappropriati, minacciosi, offensivi, o dannosi.
-=======
-Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned with this code of conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, divisive, threatening, offensive, or harmful.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+I mainteiner del progetto hanno il diritto e la responsabilità di rimuovere, modificare, o rifiutare commenti, commit, codice, modifiche al wiki, issue, e altri contributi che non siano in linea con questo codice di condotta, o di bannare in via temporanea o permanente qualunque collaboratore per altri comportamenti che ritengano inappropriati, divisivi, minacciosi, offensivi, o dannosi.
 
 ## Ambito
 

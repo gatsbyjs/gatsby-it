@@ -1,20 +1,10 @@
 ---
-<<<<<<< HEAD
 title: Documentazione di Gatsby.js
+description: Il miglior posto per tutorial, guide e informazioni sull'uso di Gatsby
 disableTableOfContents: true
 ---
-
-import EmailCaptureForm from "../../www/src/components/email-capture-form"
 
 Gatsby è un velocissimo e moderno generatore di siti per React.
-=======
-title: Gatsby.js Documentation
-description: The one stop location for tutorials, guides, and information about building with Gatsby
-disableTableOfContents: true
----
-
-Gatsby is a blazing fast modern site generator for React.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ## Per Iniziare
 

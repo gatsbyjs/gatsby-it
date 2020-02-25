@@ -76,21 +76,12 @@ Una volta installato un sito Gatsby, vai alla cartella root del tuo progetto e a
 
 #### Opzioni
 
-<<<<<<< HEAD
 |     Opzione     | Descrizione                                          |
 | :-------------: | ---------------------------------------------------- |
 | `-H`, `--host`  | Imposta host. L'impostazione predefinita è localhost |
 | `-p`, `--port`  | Imposta la porta. L'impostazione predefinita è 8000  |
 | `-o`, `--open`  | Apri il sito sul tuo browser (di default)            |
 | `-S`, `--https` | Usa HTTPS                                            |
-=======
-|     Option      | Description                                     |
-| :-------------: | ----------------------------------------------- |
-| `-H`, `--host`  | Set host. Defaults to localhost                 |
-| `-p`, `--port`  | Set port. Defaults to env.PORT or 8000          |
-| `-o`, `--open`  | Open the site in your (default) browser for you |
-| `-S`, `--https` | Use HTTPS                                       |
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Segui la [guida Local HTTPS](/docs/local-https/) per scoprire come impostare un server di sviluppo HTTPS usando Gatsby.
 
@@ -104,23 +95,14 @@ gatsby develop -H 0.0.0.0
 
 Dopo di che il terminal mostrerà come sempre il log delle informazioni, ma aggiungerà in più un URL al quale puoi accedere da un client sulla stessa rete per vedere come appare il sito.
 
-<<<<<<< HEAD
 ```
 Puoi adesso vedere gatsbyjs.org sul tuo browser.
-=======
-```shell
-You can now view gatsbyjs.org in the browser.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 ⠀
   Locale:            http://0.0.0.0:8000/
   Sulla Tua Rete:  http://192.168.0.212:8000/ // highlight-line
 ```
 
-<<<<<<< HEAD
-**Note**: non puoi visitare 0.0.0.0:8000 su Windows (ma funzionerà o usando localhost:8000 o l'URL "Sulla Tua Rete" su Windows)
-=======
-**Note**: To access Gatsby on your local machine, use either `http://localhost:8000` or the "On Your Network" URL.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+**Note**: Per accedere a Gatsby sul tuo computer locale, usa l'URL `http://localhost:8000` o l'URL mostrato su "Sulla Tua Rete".
 
 ### `build`
 
