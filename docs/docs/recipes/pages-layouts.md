@@ -1,13 +1,13 @@
 ---
-title: "Recipes: Pages and Layouts"
+title: "Ricette: Pagine e Layouts"
 tableOfContentsDepth: 1
 ---
 
-Add pages to your Gatsby site, and use layouts to manage common page elements.
+Aggiungi pagine al tuo sito Gatsby e usa i layouts per gestire gli elementi di pagina comuni.
 
 ## Project structure
 
-Inside a Gatsby project, you may see some or all of the following folders and files:
+All'interno di un progetto Gatsby, puoi vedere alcune o tutte delle seguenti cartelle o file:
 
 ```
 |-- /.cache
@@ -24,67 +24,67 @@ Inside a Gatsby project, you may see some or all of the following folders and fi
 |-- gatsby-browser.js
 ```
 
-Some notable files and their definitions:
+Alcuni files degni di nota con la loro definizione:
 
-- `gatsby-config.js` — configure options for a Gatsby site, with metadata for project title, description, plugins, etc.
-- `gatsby-node.js` — implement Gatsby’s Node.js APIs to customize and extend default settings affecting the build process
-- `gatsby-browser.js` — customize and extend default settings affecting the browser, using Gatsby’s browser APIs
-- `gatsby-ssr.js` — use Gatsby’s server-side rendering APIs to customize default settings affecting server-side rendering
+- `gatsby-config.js` — configura le opzioni di un sito Gatsby, come i metadati per il titolo di progetto, la descrizione, i plugin, ecc.
+- `gatsby-node.js` — usa l'API Node.js di Gatsby per personalizzare ed estendere la configurazione di base del processo di _build_
+- `gatsby-browser.js` — personalizza ed estendi le configurazioni di base relative al browser, usando l'API del browser di Gatsby
+- `gatsby-ssr.js` — usa l'API di server-side rendering di Gatsby per personalizzare ed estendere la configurazione di base relative al server-side rendering
 
-### Additional resources
+### Ulteriori risorse
 
-- For a tour of all the common folders and files, read the docs on [Gatsby's Project Structure](/docs/gatsby-project-structure/)
-- For common commands, check out the [Gatsby CLI docs](/docs/gatsby-cli)
-- Check out the [Gatsby Cheat Sheet](/docs/cheat-sheet/) for downloadable info at a glance
+- Per una panoramica di tutti i file e cartelle comuni, leggi la documentazione su [La struttura di un progetto Gatsby](/docs/gatsby-project-structure/)
+- Per i comandi di base, dai un occhio alla documentazione sulla [Linea di comando di Gatsby](/docs/gatsby-cli)
+- Dai un occhio alla [Guida Veloce di Gatsby](/docs/cheat-sheet/) per avere informazioni utili in un attimo
 
-## Creating pages automatically
+## Pagine create in modo automatico
 
-Gatsby core automatically turns React components in `src/pages` into pages with URLs.
-For example, components at `src/pages/index.js` and `src/pages/about.js` would automatically create pages from those filenames for the site's index page (`/`) and `/about`.
+Il core di Gatsby trasforma automaticamente in componenti React all'interno di `src/pages` in pagine con un URL.
+Per esempio, i componenti in `src/pages/index.js` e `src/pages/about.js` genereranno in automatico la pagina principale del sito (`/`) e la pagina `/about`, in base al loro nome del file.
 
-### Prerequisites
+### Prerequisiti
 
-- A [Gatsby site](/docs/quick-start)
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- Un [sito Gatsby](/docs/quick-start)
+- La [CLI di Gatsby](/docs/gatsby-cli) installata
 
-### Directions
+### Istruzioni
 
-1. Create a directory for `src/pages` if your site doesn't already have one.
-2. Add a component file to the pages directory:
+1. Crea una cartella `src/pages` se il tuo sito non ne ha già una.
+2. Aggiungi un _component_ file nella cartella delle pagine:
 
 ```jsx:title=src/pages/about.js
 import React from "react"
 
 const AboutPage = () => (
   <main>
-    <h1>About the Author</h1>
-    <p>Welcome to my Gatsby site.</p>
+    <h1>L'autore</h1>
+    <p>Benvenuto sul mio sito Gatsby.</p>
   </main>
 )
 
 export default AboutPage
 ```
 
-3. Run `gatsby develop` to start the development server.
-4. Visit your new page in the browser: `http://localhost:8000/about`
+3. Lancia `gatsby develop` per far partire il server di sviluppo.
+4. Visita la tua nuova pagina nel browser: `http://localhost:8000/about`
 
-### Additional resources
+### Ulteriori risorse
 
-- [Creating and modifying pages](/docs/creating-and-modifying-pages/)
+- [Creare e modificare pagine](/docs/creating-and-modifying-pages/)
 
-## Linking between pages
+## Collegamenti tra le pagine
 
-Routing in Gatsby relies on the `<Link />` component.
+Il routing in Gatsby si basa sul componente `<Link />`.
 
-### Prerequisites
+### Prerequisiti
 
-- A Gatsby site with two page components: `index.js` and `contact.js`
-- The Gatsby `<Link />` component
-- The [Gatsby CLI](/docs/gatsby-cli/) to run `gatsby develop`
+- Un sito Gatsby con due pagine componente: `index.js` e`contact.js`
+- Il componente `<Link />` di Gatsby
+- La [CLI di Gatsby](/docs/gatsby-cli/) per lanciare `gatsby develop`
 
-### Directions
+### Istruzioni
 
-1. Open the index page component (`src/pages/index.js`), import the `<Link />` component from Gatsby, add a `<Link />` component above the header, and give it a `to` property with the value of `"/contact/"` for the pathname:
+1. Apri il componente della pagina principale (`src/pages/index.js`), importa il componente `<Link />`, aggiungi il componente `<Link />` sopra l'header e aggiungi la proprietà `to` con il valore `"/contact/"` per il percorso:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -92,27 +92,27 @@ import { Link } from "gatsby"
 
 export default () => (
   <div style={{ color: `purple` }}>
-    <Link to="/contact/">Contact</Link>
-    <p>What a world.</p>
+    <Link to="/contact/">Contatti</Link>
+    <p>Ciao Mondo.</p>
   </div>
 )
 ```
 
-2. Run `gatsby develop` and navigate to the index page. You should have a link that takes you to the contact page when clicked!
+2. Lancia `gatsby develop` e naviga la pagina principale. Dovresti vedere un link che ti porta alla pagina dei contatti quando selezionato!
 
-> **Note**: Gatsby's `<Link />` component is a wrapper around [`@reach/router`'s Link component](https://reach.tech/router/api/Link). For more information about Gatsby's `<Link />` component, consult the [API reference for `<Link />`](/docs/gatsby-link/).
+> **Nota**: Il componente `<Link />` di Gatsby è un _wrapper_ attorno al [componente Link di `@reach/router`](https://reach.tech/router/api/Link). Per ulteriori informazioni sul componente `<Link />`di Gatsby, consulta [l'API di relativa per `<Link />`](/docs/gatsby-link/).
 
-## Creating a layout component
+## Creare un componente di layout
 
-It's common to wrap pages with a React layout component, which makes it possible to share markup, styles, and functionality across multiple pages.
+È pratica comune inserire attorno a una pagina un componente React per il _layout_, il quale rende possibile la condivisione del _markup_, stile e funzionalità a cavallo di diverse pagine.
 
-### Prerequisites
+### Prerequisiti
 
-- [A Gatsby Site](/docs/quick-start/)
+- [Un sito Gatsby](/docs/quick-start/)
 
-### Directions
+### Istruzioni
 
-1. Create a layout component in `src/components`, where child components will be passed in as props:
+1. Crea un componente layout in `src/components`, dove i componenti figli saranno passati come prop:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -124,7 +124,7 @@ export default ({ children }) => (
 )
 ```
 
-2. Import and use the layout component in a page:
+2. Importa e usa il componente layout nella pagina
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -133,29 +133,29 @@ import Layout from "../components/layout"
 
 export default () => (
   <Layout>
-    <Link to="/contact/">Contact</Link>
-    <p>What a world.</p>
+    <Link to="/contact/">Contatti</Link>
+    <p>Ciao mondo.</p>
   </Layout>
 )
 ```
 
-### Additional resources
+### Ulteriori risorse
 
-- Create a layout component in [tutorial part three](/tutorial/part-three/#your-first-layout-component)
-- Styling with [Layout Components](/docs/layout-components/)
+- Crea un componente layout nel [tutorial parte terza](/tutorial/part-three/#your-first-layout-component)
+- Dai uno stile ai [Componenti di layout](/docs/layout-components/)
 
-## Creating pages programmatically with createPage
+## Creare pagine in modo programmatico con createPage
 
-You can create pages programmatically in the `gatsby-node.js` file with helper methods Gatsby provides.
+Puoi creare pagine in modo programmatico nel file `gatsby-node.js` usando i metodi che Gatsby mette a disposizione.
 
-### Prerequisites
+### Prerequisiti
 
-- A [Gatsby site](/docs/quick-start)
-- A `gatsby-node.js` file
+- Un [sito Gatsby](/docs/quick-start)
+- Un file `gatsby-node.js`
 
-### Directions
+### Istruzioni
 
-1. In `gatsby-node.js`, add an export for `createPages`
+1. Dentro `gatsby-node.js`, aggiungi un export per `createPages`
 
 ```javascript:title=gatsby-node.js
 // highlight-start
@@ -165,7 +165,7 @@ exports.createPages = ({ actions }) => {
 // highlight-end
 ```
 
-2. Destructure the `createPage` action from the available actions so it can be called by itself, and add or get data
+2. Destruttura l'azione `createPage` dalle azioni disponibili, in modo da eseguirla da sola, e aggiungi o ricava i dati
 
 ```javascript:title=gatsby-node.js
 exports.createPages = ({ actions }) => {
@@ -186,7 +186,7 @@ exports.createPages = ({ actions }) => {
 }
 ```
 
-3. Loop through the data in `gatsby-node.js` and provide the path, template, and context (data that will be passed in the props' pageContext) to `createPage` for each invocation
+3. Itera attraverso i dati in `gatsby-node.js` e fornisci il _path_, il _template_ e il _context_ (dati che verranno passati nelle _prop_ di pageContext) a `createPage` per ogni iterazione
 
 ```javascript:title=gatsby-node.js
 exports.createPages = ({ actions }) => {
@@ -214,7 +214,7 @@ exports.createPages = ({ actions }) => {
 }
 ```
 
-4. Create a React component to serve as the template for your page that was used in `createPage`
+4. Crea un componente React che funga da template per la tua pagina che sarà usato da `createPage`
 
 ```jsx:title=src/templates/dog-template.js
 import React from "react"
@@ -226,10 +226,10 @@ export default ({ pageContext: { dog } }) => (
 )
 ```
 
-5. Run `gatsby develop` and navigate to the path of one of the pages you created (like at `http://localhost:8000/Fido`) to see the data you passed it displayed on the page
+5. Lancia `gatsby develop` e naviga il percorso di una delle pagine create (per esempio `http://localhost:8000/Fido`) per vedere i dati che hai passato, visualizzarsi nella pagina
 
-### Additional resources
+### Ulteriori risorse
 
-- Tutorial section on [programmatically creating pages from data](/tutorial/part-seven/)
-- Reference guide on [using Gatsby without GraphQL](/docs/using-gatsby-without-graphql/)
-- [Example repo](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-createPage) for this recipe
+- Sezione tutorial in [Creare pagine in modo programmatico dai dati](/tutorial/part-seven/)
+- Guida di riferimento su come [usare Gatsby senza GraphQL](/docs/using-gatsby-without-graphql/)
+- [Repository degli esempi](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-createPage) per questa ricetta
