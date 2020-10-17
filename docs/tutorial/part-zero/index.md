@@ -6,13 +6,13 @@ disableTableOfContents: true
 
 Prima di iniziare a creare il tuo primo sito Gatsby, avrai bisogno di familiarizzare con alcune tecnologie web di base e assicurarti di aver installato tutti gli strumenti software richiesti.
 
-## Familiarizzare con la linea di comando
+## Familiarizzare con la riga di comando
 
-La linea di comando è una interfaccia testuale che esegue comandi sul tuo computer. Sarà anche fatto riferimento ad essa come terminale. In questo tutorial, useremo entrambi. È un po come usare il Finder sul Mac o Explorer su Windows. Il Finder e Explorer sono esempi di interfaccia grafica (GUI). La linea di comando è un modo potente, basato sul testo, per interagire con il computer.
+La riga di comando è una interfaccia usata per eseguire comandi sul tuo computer tramite un iterazione testuale. Verrà spesso menzionata anche come terminale. In questo tutorial, useremo entrambi. È un po' come usare il Finder sul Mac o Explorer su Windows. Il Finder e Explorer sono esempi di interfaccia grafica (GUI). La riga di comando è un modo potente, basato sul testo, per interagire con il computer.
 
-Prenditi un attimo per cercare e aprire la linea di comando (CLI) sul tuo computer. A seconda del sistema operativo che stai usando, controlla [**istruzioni per Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**istruzioni per Windows**](https://www.quora.com/How-do-I-open-terminal-in-windows) o [**istruzioni per Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
+Prenditi un attimo per cercare e aprire la riga di comando (CLI) sul tuo computer. A seconda del sistema operativo che stai usando, controlla le [**istruzioni per Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), le [**istruzioni per Windows**](https://www.quora.com/How-do-I-open-terminal-in-windows) o le [**istruzioni per Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
 
-_Nota: Se sei nuovo alla, "lanciare" un comando, significa "scrivere un dato set di istruzioni nel prompt dei comandi, e premere il tasto Enter". I comandi saranno evidenziati, una cosa del tipo `node --version`, ma non ogni cosa evidenziata è un comando! Se qualcosa è un comando, esso verrà indicato come qualcosa da lanciare/eseguire._
+_Note: Se non hai mai usato la riga di comando, "lanciare" un comando, significa "scrivere un dato set di istruzioni nel prompt dei comandi, e premere il tasto Invio". I comandi verranno evidenziati in un riquadro, una cosa del tipo `node --version`, ma non ogni riquadro evidenziato è un comando! Se qualcosa è un comando, verrà indicato come qualcosa da lanciare/eseguire._
 
 ## Installa Node.js per il tuo sistema operativo
 
@@ -95,7 +95,7 @@ Dopo aver seguito i passaggi dell'installazione e aver verificato che tutto sia 
 
 ## Installa Git
 
-Git è un sistema di controllo di versione libero e open source progettato per gestire qualsiasi cosa, dai progetti piccolo a quelli di grande dimensione, in maniera veloce ed efficiente. Quando installi uno "starter" site di Gatsby, Gatsby usa Git dietro le quinte per scaricare e installare i file necessari al tuo starter. Devi avere Git installato per configurare il tuo primo sito Gatsby.
+Git è un sistema di controllo di versione libero e open source progettato per gestire qualsiasi cosa, dai progetti piccoli a quelli di grande dimensione, in maniera veloce ed efficiente. Quando installi uno "starter" site di Gatsby, Gatsby usa Git dietro le quinte per scaricare e installare i file necessari al tuo starter. Devi avere Git installato per configurare il tuo primo sito Gatsby.
 
 I passi per scaricare e installare Git dipendono dal tuo sistema operativo. Segui la guida per il tuo sistema:
 
@@ -109,7 +109,7 @@ Lo strumento Gatsby CLI ti permette in modo rapido di creare dei nuovi siti basa
 
 La Gatsby CLI è disponibile tramite npm e dovrebbe essere installata globalmente eseguendo `npm install -g gatsby-cli`.
 
-_**Nota**: quando installi Gatsby ed lo esegui per la prima volta, vedrai un breve messaggio che ti informa sulla raccolta di dati di utilizzo anonimi per i comandi Gatsby, puoi leggere di più su come i dati vengono collezionati e usati nel [documento telemetria](/docs/telemetry)._
+_**Nota**: quando installi Gatsby e lo esegui per la prima volta, vedrai un breve messaggio che ti informa sulla raccolta di dati di utilizzo anonimi per i comandi Gatsby, puoi leggere di più su come i dati vengono collezionati e usati nel [documento telemetria](/docs/telemetry)._
 
 Per vedere i comandi disponibili, esegui `gatsby --help`.
 
@@ -119,7 +119,7 @@ Per vedere i comandi disponibili, esegui `gatsby --help`.
 
 ## Crea un sito Gatsby
 
-Ora sei pronto per usare la Gastby CLI per creare il tuo primo sito Gatsby. Usando questo strumento, puoi scaricare gli “starters” (siti costrutiti in modo parziale con una configruazione di base) per aiutarti a creare determinati tipologie di sito in maniera più veloce. Lo starter “Hello World” che utilizzerai qui è uno starter con gli elementi essenziali necessari per un sito Gatsby.
+Ora sei pronto per usare la Gastby CLI per creare il tuo primo sito Gatsby. Usando questo strumento, puoi scaricare gli “starter” (siti costrutiti in modo parziale con una configruazione di base) per aiutarti a creare determinati tipologie di sito in maniera più veloce. Lo starter “Hello World” che utilizzerai qui è uno starter con gli elementi essenziali necessari per un sito Gatsby.
 
 1.  Apri il Terminale.
 2.  Esegui `gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world`. (_Nota: In base alla velocità della tua connessione, il tempo necessario varierà. Per brevità, la gif di seguito è stata messa in pausa durante parte dell'installazione_)
@@ -151,17 +151,17 @@ cd hello-world
 gatsby develop
 ```
 
-- Questo comando lancia il server di sviluppo. Sarai in grado di vedere e interagire con il tuo nuovo sito in un ambiente di sviluppo - locale (sul tuo computer, non pubblicato su internet)
+- Questo comando lancia il server di sviluppo. Sarai in grado di vedere e interagire con il tuo nuovo sito in un ambiente di sviluppo - locale (sul tuo computer, non pubblicato su internet).
 
 ### Visualizza il tuo sito localmente
 
-Apri una nuova scheda nel tuo browser e visita `http://localhost:8000`
+Apri una nuova scheda nel tuo browser e visita `http://localhost:8000/`
 
 ![Controlla l'homepage](04-home-page.png)
 
 Congratulazioni! Questo è l'inizio del tuo primo sito Gatsby! 🎉
 
-Ora puoi vedere il sito in local su `http://localhost:8000` fino a quando il tuo server di sviluppo è attivo. Questo è il processo che hai fatto partire lanciando il comando `gatsby develop`. Per fermare questo processo (o per "fermare il server di sviluppo"), torna alla tua finestra del terminale, tieni premuto il tasto “control“ e premi “c“ (ctrl-c). Per farlo partire nuovamente, lancia di nuovo `gatsby develop`!
+Ora puoi vedere il sito in local su `http://localhost:8000/` fino a quando il tuo server di sviluppo è attivo. Questo è il processo che hai fatto partire lanciando il comando `gatsby develop`. Per fermare questo processo (o per “fermare il server di sviluppo”), torna alla tua finestra del terminale, tieni premuto il tasto “control“ e premi “c“ (ctrl-c). Per farlo partire nuovamente, lancia di nuovo `gatsby develop`!
 
 **Nota:** Se stai usando una VM come `vagrant` e/o desideri mettere in ascolto il tuo indirizzo IP locale, esegui `gatsby develop - --host = 0.0.0.0`. Ora, il server di sviluppo è in ascolto sia su `http://localhost` che sul tuo IP locale.
 
@@ -212,7 +212,7 @@ Non è necessario essere già un esperto - se non lo sei, non preoccuparti! Impa
 
 ### Cos'è un sito web?
 
-Per un'introduzione completa a cosa sia un sito web -- inclusa un'introduzione a HTML e CSS -- consulta “[**Building your first web page**](https://learn.shayhowe.com/html-css/building-your-first-web-page/)”. È un ottimo posto per iniziare a conoscere il Web. Per un'introduzione più pratica sul [**HTML**](https://www.codecademy.com/learn/learn-html), [**CSS**](https://www.codecademy.com/learn/learn-css), e [**JavaScript**](https://www.codecademy.com/learn/introduction-to-javascript), dai un occhio ai tutorial di Codecademy. [**React**](https://reactjs.org/tutorial/tutorial.html) and [**GraphQL**](http://graphql.org/graphql-js/) hanno anche il loro tutorial introduttivo.
+Per un'introduzione completa a cosa sia un sito web -- inclusa un'introduzione a HTML e CSS -- consulta “[**Building your first web page**](https://learn.shayhowe.com/html-css/building-your-first-web-page/)”. È un ottimo posto per iniziare a conoscere il Web. Per un'introduzione più pratica sul [**HTML**](https://www.codecademy.com/learn/learn-html), [**CSS**](https://www.codecademy.com/learn/learn-css), e [**JavaScript**](https://www.codecademy.com/learn/introduction-to-javascript), dai un occhio ai tutorial di Codecademy. [**React**](https://reactjs.org/tutorial/tutorial.html) e [**GraphQL**](http://graphql.org/graphql-js/) hanno anche il loro tutorial introduttivo.
 
 ### Ulteriori informazioni sulla riga di comando
 
@@ -226,7 +226,7 @@ npm ha tre componenti distinti: il sito Web di npm, il registro di npm e l'inter
 
 - Sul sito web di npm, puoi esplorare quali pacchetti JavaScript sono disponibili nel registro di npm.
 - Il registro npm è un ampio database di informazioni sui pacchetti JavaScript disponibili su npm.
-- Una volta identificato un pacchetto che desideri, puoi utilizzare la CLI di npm per installarlo nel tuo progetto o globalmente (come altri strumenti CLI). La CLI di npm è la cos che comunica con il registro: generalmente interagisci solo con il sito Web di npm o con la CLI di npm.
+- Una volta identificato un pacchetto che desideri, puoi utilizzare la CLI di npm per installarlo nel tuo progetto o globalmente (come altri strumenti CLI). La CLI di npm è ciò che comunica con il registro: generalmente interagisci solo con il sito Web di npm o con la CLI di npm.
 
 > 💡 Dai un'occhiata all'introduzione di npm, "[**What is npm?**](https://docs.npmjs.com/getting-started/what-is-npm)".
 
