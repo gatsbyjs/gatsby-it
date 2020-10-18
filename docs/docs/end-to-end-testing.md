@@ -2,7 +2,7 @@
 title: End-to-End Testing
 ---
 
-[Cypress](https://www.cypress.io/) is one of the options when it comes to end-to-end (E2E) testing. Cypress is an all-in-one testing framework focused on E2E testing, meaning that you don't have to install 10 different things to get your test suite set up. You can write your first passing test in minutes without any configuration with the help of Cypress' API, which is easy to read and understand. It runs tests as fast as your browser can render content, which also makes test-driven development possible. You'll also profit from the time travel feature or the extensive debugging capabilities with Chrome DevTools. Of course, you can also use it with Gatsby, and this guide will explain how.
+[Cypress](https://www.cypress.io/) is one of the options when it comes to end-to-end (E2E) testing. Cypress is an all-in-one testing framework focused on E2E testing, meaning that you don't have to install 10 different things to get your test suite set up. You can write your first passing test in minutes without any configuration with the help of Cypress' API, which is easy to read and understand. It runs tests as fast as your browser can render content, which also makes test-driven development possible. You'll also profit from the time travel feature or the extensive debugging capabilities with Chrome DevTools. You can also use it with Gatsby, and this guide will explain how.
 
 To run Gatsby's development server and Cypress at the same time, you'll use the little helper [start-server-and-test](https://github.com/bahmutov/start-server-and-test). If you're already using [@testing-library/react](https://github.com/testing-library/react-testing-library) for [unit testing](/docs/unit-testing), you might want to install [@testing-library/cypress](https://github.com/testing-library/cypress-testing-library), too. This way you can use the same methods you used with `@testing-library/react` in your Cypress tests. Install the following packages to your `devDependencies`:
 
@@ -68,7 +68,7 @@ A good use case for writing automated end-to-end tests is asserting **accessibil
 
 To use cypress-axe, you have to install the `cypress-axe` and [axe-core](https://github.com/dequelabs/axe-core) packages. You'll also use some commands from [@testing-library/cypress](https://testing-library.com/docs/cypress-testing-library/intro) to select elements — see [best practices for selecting elements](https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements).
 
-```bash
+```shell
 npm install --save-dev cypress-axe axe-core @testing-library/cypress
 ```
 
@@ -106,9 +106,7 @@ Finally, inside the first test, you'll use the `checkA11y` command from `cypress
 
 describe("Accessibility tests", () => {
   beforeEach(() => {
-    cy.visit("/")
-      .get("main")
-      .injectAxe()
+    cy.visit("/").get("main").injectAxe()
   })
   it("Has no detectable accessibility violations on load", () => {
     cy.checkA11y()
@@ -131,9 +129,7 @@ The following test is for the [gatsby-default-starter](https://github.com/gatsby
 
 describe("Accessibility tests", () => {
   beforeEach(() => {
-    cy.visit("/")
-      .get("main")
-      .injectAxe()
+    cy.visit("/").get("main").injectAxe()
   })
   it("Has no detectable accessibility violations on load", () => {
     cy.checkA11y()
@@ -157,9 +153,7 @@ You'll now write another test for the `gatsby-default-starter` homepage. In this
 
 describe("Accessibility tests", () => {
   beforeEach(() => {
-    cy.visit("/")
-      .get("main")
-      .injectAxe()
+    cy.visit("/").get("main").injectAxe()
   })
   it("Has no detectable accessibility violations on load", () => {
     cy.checkA11y()
@@ -175,7 +169,7 @@ describe("Accessibility tests", () => {
 
     cy.focused()
       .should("have.text", "Gatsby")
-      .should("have.attr", "href", "https://www.gatsbyjs.org")
+      .should("have.attr", "href", "https://www.gatsbyjs.com")
       .should("not.have.css", "outline-width", "0px")
   })
   // highlight-end

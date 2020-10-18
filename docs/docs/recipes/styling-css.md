@@ -32,7 +32,7 @@ p {
 import "./src/styles/global.css"
 ```
 
-> **Note:** You can also make use of `require('./src/styles/global.css')` to import the global CSS file in your `gatsby-config.js` file.
+> **Note:** You can also make use of `require('./src/styles/global.css')` to import the global CSS file in your `gatsby-browser.js` file.
 
 3. Run `gatsby-develop` to observe the global styling being applied across your site.
 
@@ -70,7 +70,9 @@ body {
 import React from "react"
 import "./layout.css"
 
-export default ({ children }) => <div>{children}</div>
+export default function Layout({ children }) {
+  return <div>{children}</div>
+}
 ```
 
 5. Now edit your site's homepage at `/src/pages/index.js` and use the new layout component:
@@ -79,7 +81,9 @@ export default ({ children }) => <div>{children}</div>
 import React from "react"
 import Layout from "../components/layout"
 
-export default () => <Layout>Hello world!</Layout>
+export default function Home() {
+  return <Layout>Hello world!</Layout>
+}
 ```
 
 ### Additional resources
@@ -142,20 +146,22 @@ const User = props => (
   </>
 )
 
-export default () => (
-  <Container>
-    <h1>About Styled Components</h1>
-    <p>Styled Components is cool</p>
-    <User
-      username="Jane Doe"
-      avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-    />
-    <User
-      username="Bob Smith"
-      avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
-    />
-  </Container>
-)
+export default function UsersList() {
+  return (
+    <Container>
+      <h1>About Styled Components</h1>
+      <p>Styled Components is cool</p>
+      <User
+        username="Jane Doe"
+        avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
+      />
+      <User
+        username="Bob Smith"
+        avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
+      />
+    </Container>
+  )
+}
 ```
 
 4. Run `gatsby develop` to see the changes
@@ -190,11 +196,13 @@ import React from "react"
 // highlight-start
 import style from "./index.module.css"
 
-export default () => (
-  <section className={style.feature}>
-    <h1>Using CSS Modules</h1>
-  </section>
-)
+export default function Home() {
+  return (
+    <section className={style.feature}>
+      <h1>Using CSS Modules</h1>
+    </section>
+  )
+}
 // highlight-end
 ```
 
@@ -222,9 +230,9 @@ Sass will compile `.scss` and `.sass` files to `.css` files for you, so you can 
 
 ### Directions
 
-1. Install the Gatsby plugin [gatsby-plugin-sass](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/) and `node-sass`.
+1. Install the Gatsby plugin [gatsby-plugin-sass](/plugins/gatsby-plugin-sass/) and `node-sass`.
 
-`npm install --save node-sass gatsby-plugin-sass`
+`npm install node-sass gatsby-plugin-sass`
 
 2. Include the plugin in your `gatsby-config.js` file.
 
@@ -232,7 +240,7 @@ Sass will compile `.scss` and `.sass` files to `.css` files for you, so you can 
 plugins: [`gatsby-plugin-sass`],
 ```
 
-3.  Write your stylesheets as `.sass` or `.scss` files and import them. If you don't know how to import styles, take a look at [Styling with CSS](/docs/recipes/#2-styling-with-css)
+3. Write your stylesheets as `.sass` or `.scss` files and import them. If you don't know how to import styles, take a look at [Styling with CSS](/docs/recipes/#2-styling-with-css)
 
 ```css:title=styles.scss
 $font-stack: Helvetica, sans-serif;
@@ -262,9 +270,9 @@ _Note: You can use Sass/SCSS files as modules too, like mentioned in the previou
 
 ### Additional resources
 
-- [Difference between .sass and .scss](https://responsivedesign.is/articles/difference-between-sass-and-scss/)
+- [Difference between `.sass` and `.scss`](https://responsivedesign.is/articles/difference-between-sass-and-scss/)
 - [Sass guide from the official Sass website](https://sass-lang.com/guide)
-- [A more complete installation tutorial on Sass with some more explanations and more resources](https://www.gatsbyjs.org/docs/sass/)
+- [A more complete installation tutorial on Sass with some more explanations and more resources](/docs/sass/)
 
 ## Adding a Local Font
 
@@ -276,10 +284,6 @@ _Note: You can use Sass/SCSS files as modules too, like mentioned in the previou
 ### Directions
 
 1. Copy a font file into your Gatsby project, such as `src/fonts/fontname.woff2`.
-
-```text
-src/fonts/fontname.woff2
-```
 
 2. Import the font asset into a CSS file to bundle it into your Gatsby site:
 
@@ -319,7 +323,7 @@ If fonts are not updating following steps above, make sure to replace the existi
 1. Install the [Gatsby Emotion plugin](/packages/gatsby-plugin-emotion/) and Emotion packages.
 
 ```shell
-npm install --save gatsby-plugin-emotion @emotion/core @emotion/styled
+npm install gatsby-plugin-emotion @emotion/core @emotion/styled
 ```
 
 2. Add the `gatsby-plugin-emotion` plugin to your `gatsby-config.js` file:
@@ -338,18 +342,20 @@ Import Emotion's `css` core package. You can then use the `css` prop to add [Emo
 import React from "react"
 import { css } from "@emotion/core"
 
-export default () => (
-  <div>
-    <p
-      css={{
-        background: "pink",
-        color: "blue",
-      }}
-    >
-      This page is using Emotion.
-    </p>
-  </div>
-)
+export default function EmotionSample() {
+  return (
+    <div>
+      <p
+        css={{
+          background: "pink",
+          color: "blue",
+        }}
+      >
+        This page is using Emotion.
+      </p>
+    </div>
+  )
+}
 ```
 
 4. To use Emotion's [styled components](https://emotion.sh/docs/styled), import the package and define them using the `styled` function.
@@ -366,11 +372,13 @@ const Content = styled.div`
   }
 `
 
-export default () => (
-  <Content>
-    <p>This page is using Emotion.</p>
-  </Content>
-)
+export default function EmotionSample() {
+  return (
+    <Content>
+      <p>This page is using Emotion.</p>
+    </Content>
+  )
+}
 ```
 
 ### Additional resources
@@ -391,9 +399,9 @@ Hosting your own [Google Fonts](https://fonts.google.com/) locally within a proj
 
 ### Directions
 
-1. Run `npm install --save typeface-your-chosen-font`, replacing `your-chosen-font` with the name of the font you want to install from [the typefaces project](https://github.com/KyleAMathews/typefaces).
+1. Run `npm install typeface-your-chosen-font`, replacing `your-chosen-font` with the name of the font you want to install from [the typefaces project](https://github.com/KyleAMathews/typefaces).
 
-An example to load the popular 'Source Sans Pro' font would be: `npm install --save typeface-source-sans-pro`.
+An example to load the popular 'Source Sans Pro' font would be: `npm install typeface-source-sans-pro`.
 
 2. Add `import "typeface-your-chosen-font"` to a layout template, page component, or `gatsby-browser.js`.
 
@@ -416,3 +424,44 @@ _NOTE: So for the above example, the relevant CSS declaration would be `font-fam
 - [Typography.js](/docs/typography-js/) - Another option for using Google fonts on a Gatsby site
 - [The Typefaces Project Docs](https://github.com/KyleAMathews/typefaces/blob/master/README.md)
 - [Live example on Kyle Mathews' blog](https://www.bricolage.io/typefaces-easiest-way-to-self-host-fonts/)
+
+## Using Font Awesome
+
+Using [Font Awesome](https://fontawesome.com/) gives you access to thousands of icons for use on your site. Since Gatsby sites are React sites, it's recommended to use the [react-fontawesome](https://github.com/FortAwesome/react-fontawesome) SVG library.
+
+### Prerequisites
+
+- The [Gatsby CLI](/docs/gatsby-cli/) installed
+- A [Gatsby site](/docs/quick-start)
+
+### Directions
+
+1. Install the `react-fontawesome` dependencies.
+
+```shell
+npm install @fortawesome/fontawesome-svg-core  @fortawesome/free-brands-svg-icons @fortawesome/react-fontawesome
+```
+
+> Note that there are multiple icon libraries within `react-fontawesome`. You may also be interested in `free-regular-svg-icons` and `free-solid-svg-icons` which you would install the same way.
+
+2. Import the `FontAwesomeIcon` component and the icon you want to use. Then use the icon as a component directly in your JSX files:
+
+```jsx:title=index.js
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faReact } from "@fortawesome/free-brands-svg-icons"
+
+const IndexPage = () => (
+  <Layout>
+    <FontAwesomeIcon icon={faReact} /> //highlight-line
+  </Layout>
+)
+
+export default IndexPage
+```
+
+> This example imports a single, specific icon and uses it for improved performance. As an alternative, you can [import the icons and build a library](https://github.com/FortAwesome/react-fontawesome#build-a-library-to-reference-icons-throughout-your-app-more-conveniently).
+
+### Additional resources
+
+- [Font Awesome](https://fontawesome.com/)
+- [react-fontawesome](https://github.com/FortAwesome/react-fontawesome)

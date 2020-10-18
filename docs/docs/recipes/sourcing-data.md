@@ -41,7 +41,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 
    > _Note: After making changes in `gatsby-node.js` you need to re-run `gatsby develop` for the changes to take effect._
 
-3. Query the data (in GraphiQL or in your components).
+3. Query the data (in [GraphiQL](/docs/running-queries-with-graphiql/) or in your components).
 
 ```graphql
 query MyPokemonQuery {
@@ -59,7 +59,7 @@ query MyPokemonQuery {
 
 - Walk through an example using the `gatsby-source-filesystem` plugin in [tutorial part five](/tutorial/part-five/#source-plugins)
 - Search available source plugins in the [Gatsby library](/plugins/?=source)
-- Understand source plugins by building one in the [Pixabay source plugin tutorial](/docs/pixabay-source-plugin-tutorial/)
+- Understand source plugins by building one in the [source plugin tutorial](/tutorial/source-plugin-tutorial/)
 - The createNode function [documentation](/docs/actions/#createNode)
 
 ## Sourcing Markdown data for blog posts and pages with GraphQL
@@ -220,7 +220,7 @@ export const pageQuery = graphql`
 1. Install the `gatsby-source-wordpress` plugin by running the following command:
 
 ```shell
-npm install gatsby-source-wordpress --save
+npm install gatsby-source-wordpress
 ```
 
 2. Configure the plugin by modifying the `gatsby-config.js` file such that it includes the following:
@@ -377,7 +377,7 @@ contentful space accesstoken create -s '<space ID>' --name 'Example token'
 5. Install the `gatsby-source-contentful` plugin in your Gatsby site:
 
 ```shell
-npm install --save gatsby-source-contentful
+npm install gatsby-source-contentful
 ```
 
 6. Edit the file `gatsby-config.js` and add the `gatsby-source-contentful` to the `plugins` array to enable the plugin. You should strongly consider using [environment variables](/docs/environment-variables/) to store your space ID and token for security purposes.
@@ -403,7 +403,7 @@ plugins: [
 
 8. Query data with the [GraphiQL editor](/docs/introducing-graphiql/) at `http://localhost:8000/___graphql`. The Contentful plugin adds several new node types to your site, including every content type in your Contentful website. Your example space with a "Blog Post" content type produces a `allContentfulBlogPost` node type in GraphQL.
 
-![the graphql interface, with a sample query outlined below](../images/recipe-sourcing-contentful-graphql.png)
+![The GraphQL interface, with a sample query outlined below](../images/recipe-sourcing-contentful-graphql.png)
 
 To query for Blog Post titles from Contentful, use the following GraphQL query:
 
@@ -511,19 +511,21 @@ exports.createPages = async ({ actions: { createPage } }) => {
 ```jsx:title=src/templates/all-pokemon.js
 import React from "react"
 
-export default ({ pageContext: { allPokemon } }) => (
-  <div>
-    <h1>Behold, the Pokémon!</h1>
-    <ul>
-      {allPokemon.map(pokemon => (
-        <li key={pokemon.id}>
-          <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-          <p>{pokemon.name}</p>
-        </li>
-      ))}
-    </ul>
-  </div>
-)
+export default function AllPokemon({ pageContext: { allPokemon } }) {
+  return (
+    <div>
+      <h1>Behold, the Pokémon!</h1>
+      <ul>
+        {allPokemon.map(pokemon => (
+          <li key={pokemon.id}>
+            <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+            <p>{pokemon.name}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
 ```
 
 3. Run `gatsby develop` to fetch the data, build pages, and start the development server.
@@ -548,7 +550,7 @@ export default ({ pageContext: { allPokemon } }) => (
 1. Install the `gatsby-source-drupal` plugin.
 
 ```shell
-npm install --save gatsby-source-drupal
+npm install gatsby-source-drupal
 ```
 
 2. Edit your `gatsby-config.js` file to enable the plugin and configure it.

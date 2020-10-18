@@ -10,7 +10,7 @@ Gatsby does not, by default, automatically apply layouts to pages (there are, ho
 
 ## What are layout components?
 
-Layout components are for sections of your site that you want to share across multiple pages. For example, Gatsby sites will commonly have a layout component with a shared header and footer. Other common things to add to layouts are a sidebar and/or navigation menu. On this page for example, the header at the top is part of gatsbyjs.org’s layout component.
+Layout components are for sections of your site that you want to share across multiple pages. For example, Gatsby sites will commonly have a layout component with a shared header and footer. Other common things to add to layouts are a sidebar and/or navigation menu. On this page for example, the header at the top is part of gatsbyjs.com’s layout component.
 
 ## How to create layout components
 
@@ -21,11 +21,13 @@ Here is an example of a very basic layout component at `src/components/layout.js
 ```jsx:title=src/components/layout.js
 import React from "react"
 
-export default ({ children }) => (
-  <div style={{ margin: `0 auto`, maxWidth: 650, padding: `0 1rem` }}>
-    {children}
-  </div>
-)
+export default function Layout({ children }) {
+  return (
+    <div style={{ margin: `0 auto`, maxWidth: 650, padding: `0 1rem` }}>
+      {children}
+    </div>
+  )
+}
 ```
 
 ## How to import and add layout components to pages
@@ -36,11 +38,13 @@ If you want to apply a layout to a page, you will need to include the `Layout` c
 import React from "react"
 import Layout from "../components/layout" // highlight-line
 
-export default () => (
-  <Layout> {/* highlight-line */}
-    <h1>I’m in a layout!</h1>
-  </Layout> {/* highlight-line */}
-)
+export default function Home() {
+  return (
+    <Layout> {/* highlight-line */}
+      <h1>I’m in a layout!</h1>
+    </Layout> {/* highlight-line */}
+  );
+}
 ```
 
 Repeat for every page and template that needs this layout.

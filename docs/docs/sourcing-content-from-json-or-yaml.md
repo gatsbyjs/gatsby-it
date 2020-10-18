@@ -8,13 +8,13 @@ To follow along with the JSON or YAML data sourcing tips outlined in this guide,
 
 Open up a terminal and run the following command:
 
-```bash
+```shell
 gatsby new gatsby-YAML-JSON-at-buildtime https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
 ## Directly import data with YAML
 
-This section starts with YAML data sourcing. If you want to see how to do it using JSON instead, jump to the [next section](#Directly-importing-data-with-JSON).
+This section starts with YAML data sourcing. If you want to see how to do it using JSON instead, jump to the [next section](#directly-import-data-with-json).
 
 ### Add the YAML content
 
@@ -132,8 +132,8 @@ For this example, you will need to add an extra dependency so that the file cont
 
 Open your terminal, navigate to the folder containing the Gatsby site, and issue the following command:
 
-```bash
-npm install --save js-yaml
+```shell
+npm install js-yaml
 ```
 
 This newly added package will be responsible for loading and parsing the YAML file safely.

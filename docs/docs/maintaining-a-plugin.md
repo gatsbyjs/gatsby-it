@@ -24,7 +24,7 @@ Version 1.0.0 should be released when the plugin's API is considered stable. Ver
 
 > Consider a version format of X.Y.Z (Major.Minor.Patch). Bug fixes not affecting the API increment the patch version, backwards compatible API additions/changes increment the minor version, and backwards incompatible API changes increment the major version.
 
-Read more about this concept [in this paper on semantic versioning ](https://semver.org/).
+Read more about this concept [in this paper on semantic versioning](https://semver.org/).
 
 ## Update README and document use cases
 
@@ -47,7 +47,7 @@ There are a couple of useful tools that can help with keeping dependencies up to
 1. Install the tool
 
 ```shell
- npm i -g npm-check-updates
+ npm install -g npm-check-updates
 ```
 
 2. Run the command to update dependencies
