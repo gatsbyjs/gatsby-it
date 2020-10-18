@@ -10,7 +10,7 @@ Once a language repository is created and someone on the Gatsby team has assigne
 
 ### Use English as the source
 
-The [gatsbyjs.org](https://gatsbyjs.org) website is written first in English and should be considered the source material for all translations (as opposed to starting from another translation). When a repository is created, it will provide a copy of the docs to be translated which you can then update through [pull requests](/contributing/how-to-open-a-pull-request/) against them in the relevant language.
+The [gatsbyjs.com](https://www.gatsbyjs.com) website is written first in English and should be considered the source material for all translations (as opposed to starting from another translation). When a repository is created, it will provide a copy of the docs to be translated which you can then update through [pull requests](/contributing/how-to-open-a-pull-request/) against them in the relevant language.
 
 Changes to the meaning of a text or code example should be done in the main [English repo](https://github.com/gatsbyjs/gatsby/), and then translated afterwards to keep the content aligned across languages.
 
@@ -39,4 +39,4 @@ If you would like to be a maintainer of an existing translation repo, submit a P
 
 ## When a contributor will be removed
 
-Consistent with the [Code of Conduct](/docs/code-of-conduct/) the Gatsby team reserves the right to remove a contributor (including translation maintainers) from the Gatsby organization if necessary. Some reasons for being removed include spammy comments, closing PRs or issues without action or productive dialogue, or generally harmful or abusive behavior inconsistent with Gatsby's policies.
+Consistent with the [Code of Conduct](/contributing/code-of-conduct/) the Gatsby team reserves the right to remove a contributor (including translation maintainers) from the Gatsby organization if necessary. Some reasons for being removed include spammy comments, closing PRs or issues without action or productive dialogue, or generally harmful or abusive behavior inconsistent with Gatsby's policies.
