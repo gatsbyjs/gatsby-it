@@ -28,7 +28,7 @@ In questi tutorial intermedi, imparerai come ottenere i dati da qualsiasi fonte 
 
 I temi di Gatsby astraggono tutte le configurazioni di base (funzionalità condivise, acquisizione dati, progettazione) del tuo sito e le inseriscono in un pacchetto installabile.
 
-Questo singifica che le configurazioni e le funzionalità non sono scritte direttamente dentro il tuo progetto, vengono invece versionate, gestite in modo centrale, e installate come una dipendenza. Puoi aggiornare in modo trasparente un tema, comporre temmi insieme, ed eventualmente scambiare un tema compatibile con un altro.
+Questo significa che le configurazioni e le funzionalità non sono scritte direttamente dentro il tuo progetto, vengono invece versionate, gestite in modo centrale, e installate come una dipendenza. Puoi aggiornare in modo trasparente un tema, comporre temi insieme, ed eventualmente scambiare un tema compatibile con un altro.
 
 Scopri di più su come usare e creare temi con i [tutorial sui temi di Gatsby](/tutorial/theme-tutorials/).
 
