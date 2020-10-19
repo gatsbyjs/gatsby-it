@@ -3,7 +3,7 @@ title: "Ricette: Trasformazione dei dati"
 tableOfContentsDepth: 1
 ---
 
-La trasformazione dei dati in Gatsby è gestita da plugin. I plug-in Transformer prendono i dati recuperati utilizzando i plug-in di origine e li elaborano in qualcosa di più utilizzabile (ad esempio JSON in oggetti JavaScript e altro).
+La trasformazione dei dati in Gatsby è gestita da plugin. I plug-in trasformatori prendono i dati recuperati utilizzando i plug-in di origine e li elaborano in qualcosa di più utilizzabile (ad esempio JSON in oggetti JavaScript e altro).
 
 ## Trasformare Markdown in HTML
 
@@ -27,7 +27,7 @@ plugins: [
 ],
 ```
 
-2. Aggiungi una query GraphQL al file ʻindex.js`del tuo sito Gatsby per recuperare i nodi`MarkdownRemark`:
+2. Aggiungi una query GraphQL al file ʻindex.js`del tuo sito Gatsby per recuperare i nodi del `MarkdownRemark`:
 
 ```jsx:title=src/pages/index.js
 export const query = graphql`
@@ -61,9 +61,9 @@ export const query = graphql`
 ### Prerequisiti
 
 - Un [sito Gatsby](/docs/quick-start) con un file `gatsby-config.js` e una pagina ʻindex.js`
-- I pacchetti `gatsby-image`,` gatsby-transformer-sharp` e `gatsby-plugin-sharp` installati
+- I pacchetti `gatsby-image`, `gatsby-transformer-sharp` e `gatsby-plugin-sharp` installati
 - Un plugin sorgente installato, come `gatsby-source-filesystem`
-- Un'immagine (`.jpg`,` .png`, `.gif`,` .svg`, ecc.) Nella cartella `src / images`
+- Un'immagine (`.jpg`, `.png`, `.gif`, `.svg`, ecc.) Nella cartella `src/images`
 
 ### Indicazioni
 
@@ -84,7 +84,7 @@ export const query = graphql`
  ],
 ```
 
-2. Utilizza una query per ottenere la tua immagine usando GraphQL e applica una trasformazione in scala di grigi all'immagine in linea. Il `relativePath` dovrebbe essere relativo al percorso che hai configurato in` gatsby-source-filesystem`.
+2. Utilizza una query per ottenere la tua immagine usando GraphQL e applica una trasformazione in scala di grigi all'immagine in linea. Il `relativePath` dovrebbe essere relativo al percorso che hai configurato in `gatsby-source-filesystem`.
 
 ```graphql
   query {
