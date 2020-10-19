@@ -3,7 +3,7 @@ title: "Ricette: Trasformazione dei dati"
 tableOfContentsDepth: 1
 ---
 
-La trasformazione dei dati in Gatsby è gestita da plugin. I plug-in trasformatori prendono i dati recuperati utilizzando i plug-in di origine e li elaborano in qualcosa di più utilizzabile (ad esempio JSON in oggetti JavaScript e altro).
+La trasformazione dei dati in Gatsby è gestita da plugin. I plugin trasformatori prendono i dati recuperati utilizzando i plugin di origine e li elaborano in qualcosa di più utilizzabile (ad esempio JSON in oggetti JavaScript e altro).
 
 ## Trasformare Markdown in HTML
 
@@ -11,7 +11,7 @@ Il plugin `gatsby-transformer-remark` può trasformare i file Markdown in HTML.
 
 ### Prerequisiti
 
-- Un sito Gatsby con `gatsby-config.js` e una pagina ʻindex.js`
+- Un sito Gatsby con `gatsby-config.js` e una pagina `index.js`
 - Un file Markdown salvato nella directory `src` del tuo sito Gatsby
 - Un plugin sorgente installato, come `gatsby-source-filesystem`
 - Il plugin `gatsby-transformer-remark` installato
@@ -27,7 +27,7 @@ plugins: [
 ],
 ```
 
-2. Aggiungi una query GraphQL al file ʻindex.js`del tuo sito Gatsby per recuperare i nodi del `MarkdownRemark`:
+2. Aggiungi una query GraphQL al file `index.js`del tuo sito Gatsby per recuperare i nodi del `MarkdownRemark`:
 
 ```jsx:title=src/pages/index.js
 export const query = graphql`
@@ -54,13 +54,13 @@ export const query = graphql`
 ### Risorse addizionali
 
 - [Tutorial sulla trasformazione di Markdown in HTML](/tutorial/part-six/#transformer-plugins) usando `gatsby-transformer-remark`
-- Sfoglia i plug-in Transformer disponibili nella [libreria plug-in Gatsby](/plugins/?=transformer)
+- Sfoglia i plugin Transformer disponibili nella [libreria plugin Gatsby](/plugins/?=transformer)
 
 ## Trasformare le immagini in scala di grigi utilizzando GraphQL
 
 ### Prerequisiti
 
-- Un [sito Gatsby](/docs/quick-start) con un file `gatsby-config.js` e una pagina ʻindex.js`
+- Un [sito Gatsby](/docs/quick-start) con un file `gatsby-config.js` e una pagina `index.js`
 - I pacchetti `gatsby-image`, `gatsby-transformer-sharp` e `gatsby-plugin-sharp` installati
 - Un plugin sorgente installato, come `gatsby-source-filesystem`
 - Un'immagine (`.jpg`, `.png`, `.gif`, `.svg`, ecc.) Nella cartella `src/images`
@@ -101,7 +101,7 @@ export const query = graphql`
 
 Nota: puoi trovare questi e altri parametri nel tuo playground GraphQL in `http://localhost:8000/__graphql`
 
-3. Successivamente importa il componente ʻImg` da "gatsby-image". Lo userai all'interno del tuo JSX per visualizzare l'immagine.
+3. Successivamente importa il componente `Img` da "gatsby-image". Lo userai all'interno del tuo JSX per visualizzare l'immagine.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -137,7 +137,7 @@ export default function Home() {
 }
 ```
 
-4. Esegui `gatsby Develop` per avviare il server di sviluppo.
+4. Esegui `gatsby develop` per avviare il server di sviluppo.
 
 5. Visualizza la tua immagine nel browser: `http://localhost:8000/`
 
