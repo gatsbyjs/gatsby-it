@@ -86,6 +86,7 @@ In questa sezione puoi trovare una guida alla traduzione dei termini tecnici pi√
 | Terminologia | Traduzione |
 | ------------ | ---------- |
 | Theme        | Tema       |
+| Gatsby CLI   | Gatsby CLI |
 | ...          | ??         |
 
 Termini e frasi che non vanno tradotti in italiano:
