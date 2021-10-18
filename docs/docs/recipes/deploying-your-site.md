@@ -1,5 +1,5 @@
 ---
-title: "Ricette: Distribuire Il Tuo Sito"
+title: "Ricette: Distribuire il tuo sito"
 tableOfContentsDepth: 1
 ---
 
@@ -14,9 +14,9 @@ tableOfContentsDepth: 1
 
 ### Indicazioni
 
-1. Ferma il tuo server di sviluppo se è in esecuzione (`Ctrl + C` nella tua linea di comando nella maggior parte dei casi)
+1. Ferma il tuo server di sviluppo se è in esecuzione (`Ctrl + C` nella tua riga di comando nella maggior parte dei casi)
 
-2. Per il percorso standard del sito esegui `gatsby build` nella cartella radice (`/`) usando la Gatsby CLI nella linea di comando. I file compilati saranno ora nella cartella `public`.
+2. Per il percorso standard del sito esegui `gatsby build` nella cartella radice (`/`) usando la Gatsby CLI nella riga di comando. I file compilati saranno ora nella cartella `public`.
 
 ```shell
 gatsby build
@@ -38,7 +38,7 @@ Ci sono alcune ragioni per farlo --  per esempio, hostare un blog compilato con 
 gatsby build --prefix-paths
 ```
 
-5. Assicurati che il tuo sito si visualizzi nello stesso modo sia quando si esegue `gatsby build` che quando si esegue `gatsby develop`. Eseguendo `gatsby serve` quando si compila il sito, si può testare (ed effettuare debug se necessario) il prodotto finito prima di distribuire il sito.
+5. Assicurati che il tuo sito si visualizzi nello stesso modo sia quando si esegue `gatsby build` che quando si esegue `gatsby develop`. Eseguendo `gatsby serve` quando si compila il sito, si può testare (e debuggare se necessario) il prodotto finito prima di distribuire il sito.
 
 ```shell
 gatsby build && gatsby serve
@@ -53,7 +53,7 @@ gatsby build && gatsby serve
 
 ## Distribuire su Netlify
 
-Usa [`netlify-cli`](https://www.netlify.com/docs/cli/) per distribuire la tua applicazione Gatsby senza lasciare la linea di comando.
+Usa [`netlify-cli`](https://www.netlify.com/docs/cli/) per distribuire la tua applicazione Gatsby senza lasciare la riga di comando.
 
 ### Prerequisiti
 
@@ -84,7 +84,7 @@ Usa [`netlify-cli`](https://www.netlify.com/docs/cli/) per distribuire la tua ap
 
 ## Distribuire su Vercel
 
-Usa la [Vercel CLI](https://vercel.com/download) per distribuire la tua applicazione Gatsby senza lasciare la linea di comando.
+Usa la [Vercel CLI](https://vercel.com/download) per distribuire la tua applicazione Gatsby senza lasciare la riga di comando.
 
 ### Prerequisiti
 
@@ -107,7 +107,7 @@ Usa la [Vercel CLI](https://vercel.com/download) per distribuire la tua applicaz
 
 ## Distribuire su Cloudflare Workers
 
-Usa [`wrangler`](https://developers.cloudflare.com/workers/tooling/wrangler/) per distribuire la tua applicazione Gatsby globalmente senza lasciare la linea di comando.
+Usa [`wrangler`](https://developers.cloudflare.com/workers/tooling/wrangler/) per distribuire la tua applicazione Gatsby globalmente senza lasciare la riga di comando.
 
 ### Prerequisiti
 
@@ -139,7 +139,7 @@ Usa `gatsby-plugin-google-analytics` per tracciare l'attività del sito e fornir
 
 - Un [sito Gatsby](/docs/quick-start) con un file `gatsby-config.js` e una pagina `index.js`
 - La [Gatsby CLI](/docs/gatsby-cli) installata
-- Un dominio dal un fornitore a tua scelta, ad es. [AWS](https://aws.amazon.com/getting-started/tutorials/get-a-domain/)
+- Un dominio di un fornitore a tua scelta, ad es. [AWS](https://aws.amazon.com/getting-started/tutorials/get-a-domain/)
 
 ### Verifica il dominio in search.google.com
 
@@ -156,7 +156,7 @@ Usa `gatsby-plugin-google-analytics` per tracciare l'attività del sito e fornir
 
 ### Ottenere il tuo `ID Monitoraggio` di Google Analytics
 
-1. Entra nel tu account Google Analytics.
+1. Entra nel tuo account Google Analytics.
 2. Clicca **Amministratore**.
 3. Seleziona un account dal menù nella colonna ACCOUNT.
 4. Seleziona una proprietà dal menù nella colonna PROPRIETÀ.
@@ -181,7 +181,7 @@ module.exports = {
 }`
 ```
 
-3. Compila e distribuisci il tuo sito per iniziare a vedere del traffivo nella tua [dashboard di Google Analytics](https://analytics.google.com/analytics/web/).
+3. Compila e distribuisci il tuo sito per iniziare a vedere del traffico nella tua [dashboard di Google Analytics](https://analytics.google.com/analytics/web/).
 
 ### Risorse aggiuntive
 
