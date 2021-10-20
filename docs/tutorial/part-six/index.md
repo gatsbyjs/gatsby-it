@@ -8,11 +8,11 @@ disableTableOfContents: true
 
 ## Cosa c'è in questo tutorial?
 
-Il tutorial precedente ha mostrato come i source plugins portano i dati _nel_ sistema dati di Gatsby. In questo tutorial, imparerai come i transformer plugins _trasformano_ il contenuto non elaborato portato dai source plugin. La combinazione di source plugin e di transformer plugin può gestire tutte le fonti di dati e la trasformazione dei dati di cui potresti aver bisogno durante la creazione di un sito Gatsby.
+Il tutorial precedente ha mostrato come i source plugin portano i dati _nel_ sistema dati di Gatsby. In questo tutorial, imparerai come i transformer plugin _trasformano_ il contenuto non elaborato portato dai source plugin. La combinazione di source plugin e di transformer plugin può gestire tutte le fonti di dati e la trasformazione dei dati di cui potresti aver bisogno durante la creazione di un sito Gatsby.
 
 ## Transformer plugin
 
-Spesso, il formato dei dati che ottieni dai source plugins non è quello che desideri utilizzare per creare il tuo sito web. Il filesystem source plugin ti consente di interrogare i dati _riguardo_ ai file, ma cosa succede se vuoi interrogare i dati _dentro_ i file? ?
+Spesso, il formato dei dati che ottieni dai source plugin non è quello che desideri utilizzare per creare il tuo sito web. Il filesystem source plugin ti consente di interrogare i dati _riguardo_ ai file, ma cosa succede se vuoi interrogare i dati _dentro_ i file?
 
 Per renderlo possibile, Gatsby supporta i transformer plugin che prendono il contenuto non elaborato dai source plugin e lo _trasformano_ in qualcosa di più utilizzabile.
 
@@ -33,7 +33,7 @@ Here's a video of a panda eating sweets.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>
 ```
 
-Una volta salvato il file, guarda di nuovo `/my-files/`: il nuovo file markdown è nella tabella. Questa è una caratteristica molto potente di Gatsby. Come il precedente esempio "siteMetadata", i source plugins possono ricaricare i dati in tempo reale. `gatsby-source-filesystem` è sempre alla ricerca di nuovi file da aggiungere e quando ce ne sono, riesegue le tue query.
+Una volta salvato il file, guarda di nuovo `/my-files/`: il nuovo file markdown è nella tabella. Questa è una caratteristica molto potente di Gatsby. Come il precedente esempio "siteMetadata", i source plugin possono ricaricare i dati in tempo reale. `gatsby-source-filesystem` è sempre alla ricerca di nuovi file da aggiungere e quando ce ne sono, riesegue le tue query.
 
 Aggiungi un transformer plugin che può trasformare i file markdown:
 
@@ -169,7 +169,7 @@ Do Pandas eat bananas? Check out this short video that shows that yes! pandas do
 
 Che sembra fantastico! Tranne che... l'ordine dei post è sbagliato.
 
-Ma questo è facile da risolvere. Quando si esegue una query su una connessione di qualche tipo, è possibile passare una varietà di argomenti alla query GraphQL. Puoi `ordinare` e `filtrare` i nodi, impostare il numero di nodi da `saltare` e scegliere il `limite` di quanti nodi recuperare. Con questo potente set di operatori, puoi selezionare tutti i dati che desideri - nel formato che ti serve.
+Ma questo è facile da risolvere. Quando si esegue una query su una connessione di qualche tipo, è possibile passare una varietà di argomenti alla query GraphQL. Puoi ordinare (`sort`) e filtrare (`filter`) i nodi, impostare il numero di nodi da saltare (`skip`) e scegliere il limite (`limit`) di quanti nodi recuperare. Con questo potente set di operatori, puoi selezionare tutti i dati che desideri, nel formato che ti serve.
 
 Nella query GraphQL della tua pagina iniziale, sostituisci `allMarkdownRemark` con `allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC })`. _Nota: Ci sono 3 underscore tra `frontmatter` e `date`._ Salva il file e l'ordinamento dovrebbe essere corretto.
 
