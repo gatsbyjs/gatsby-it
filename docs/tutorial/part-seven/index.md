@@ -25,7 +25,7 @@ La creazione di nuove pagine prevede due passaggi:
 1. Generare il "path" o lo "slug" per la pagina.
 2. Creare la pagina.
 
-_**Nota**: Spesso le fonti di dati forniscono direttamente uno slug o un pathname per il contenuto — quando si lavora con uno di questi sistemi (ad es. un CMS), non è necessario creare gli slug da soli come si fa con i file markdown. _
+_**Nota**: Spesso le fonti di dati forniscono direttamente uno slug o un pathname per il contenuto; quando si lavora con uno di questi sistemi (ad es. un CMS), non è necessario creare gli slug da soli come si fa con i file markdown._
 
 Per creare le tue pagine markdown, imparerai a utilizzare due API di Gatsby: [`onCreateNode`](/docs/node-apis/#onCreateNode) e [`createPages`](/docs/node-apis/#createPages). Queste sono due API considerate cavalli da battaglia e che vedrai utilizzate in molti siti e plugin.
 
