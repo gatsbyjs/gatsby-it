@@ -1,31 +1,31 @@
 ---
 title: Node API Helpers
-description: Documentation on API helpers for creating nodes within Gatsby's GraphQL data layer
+description: Documentazione sugli API helper per creare nodi nel layer dati del GraphQL di Gatsby
 jsdoc: ["src/utils/api-node-helpers-docs.js"]
 apiCalls: NodeAPIHelpers
 contentsHeading: Shared helpers
 showTopLevelSignatures: true
 ---
 
-The first argument passed to each of [Gatsby’s Node APIs](/docs/node-apis/) is an object containing a set of helpers. Helpers shared by all Gatsby’s Node APIs are documented in [Shared helpers](#apis) section.
+Il primo argomento passato ad ogni [API dei nodi di Gatsby](/docs/node-apis/) è un oggetto contenente un insieme di helper. Gli helper condivisi da tutte le API di nodo di Gatsby sono documentate nella sezione [Helper condivisi](#apis).
 
 ```javascript
 // in gatsby-node.js
 exports.createPages = gatsbyNodeHelpers => {
   const { actions, reporter } = gatsbyNodeHelpers
-  // use helpers
+  // usa helper
 }
 ```
 
-Common convention is to destructure helpers right in argument list:
+Una convenzione comune è destrutturare gli helper direttamente nella lista degli argomenti:
 
 ```javascript
 // in gatsby-node.js
 exports.createPages = ({ actions, reporter }) => {
-  // use helpers
+  // usa helpers
 }
 ```
 
-## Note
+## Nota
 
-Some APIs provide additional helpers. For example `createPages` provides `graphql` function. Check documentation of specific APIs in [Gatsby Node APIs](/docs/node-apis/) for details.
+Alcune API forniscono helper aggiuntivi. Per esempio `createPages` fornisce la funzione `graphql`. Controlla la documentazione delle specifiche API in [Gatsby Node APIs](/docs/node-apis/) per i dettagli.
