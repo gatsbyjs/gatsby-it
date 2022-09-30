@@ -3,7 +3,7 @@ title: "Ricette: Lavorare con gli Starter"
 tableOfContentsDepth: 1
 ---
 
-Gli [Starter](/docs/starters/) sono siti template mantenuti officialmente o dalla community.
+Gli [Starter](/docs/starters/) sono siti template mantenuti ufficialmente o dalla community.
 
 ## Usare uno starter
 
