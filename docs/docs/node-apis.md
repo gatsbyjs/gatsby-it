@@ -1,39 +1,39 @@
 ---
-title: Gatsby Node APIs
-description: Documentation on Node APIs used in Gatsby build process for common uses like creating pages
+title: API di Node in Gatsby 
+description: Documentazione della API di Node usate nel processo di compilazione per utenti comuni come creare pagine
 jsdoc: ["src/utils/api-node-docs.ts"]
 apiCalls: NodeAPI
 ---
 
-Gatsby gives plugins and site builders many APIs for controlling your site's data in the GraphQL data layer.
+Gatsby fornisce ai plugin e compilatori di sito molte API per controllare i dati del tuo sito nel livello dati di GraphQL.
 
-## Async plugins
+## Plugin asincroni
 
-If your plugin performs async operations (disk I/O, database access, calling remote APIs, etc.) you must either return a promise (explicitly using `Promise` API or implicitly using `async`/`await` syntax) or use the callback passed to the 3rd argument. Gatsby needs to know when plugins are finished as some APIs, to work correctly, require previous APIs to be complete first. See [Debugging Async Lifecycles](/docs/debugging-async-lifecycles/) for more info.
+Se i tuoi plugin effettuano operazioni asincrone (I/O su disco, accesso a database, chiamare API remote, ecc.), devi ritornare una Promise (usando esplicitamente l'API `Promise` o implicitamente usando la sintassi `async`/`await`) o usando la callback passata al terzo argomento. Gatsby necessita di sapere quando i plugin hanno concluso l'operazione, in quanto alcune API, per funzionare correttamente, necessitano prima che altre API usate precedentemente siano concluse. Vedi [Debuggare cicli asincroni](/docs/debugging-async-lifecycles/) per maggiori informazioni.
 
 ```javascript
 // Async/await
 exports.createPages = async () => {
-  // do async work
+  // fai qualcosa di asincrono
   const result = await fetchExternalData()
 }
 
 // Promise API
 exports.createPages = () => {
   return new Promise((resolve, reject) => {
-    // do async work
+    // fai qualcosa di asincrono
   })
 }
 
 // Callback API
 exports.createPages = (_, pluginOptions, cb) => {
-  // do async work
+  // fai qualcosa di asincrono
   cb()
 }
 ```
 
-If your plugin does not do async work, you can just return directly.
+Se il tuo plugin non esegue alcuna operazione asincorna, puoi ritornare direttamente.
 
-## Usage
+## Uso
 
-Implement any of these APIs by exporting them from a file named `gatsby-node.js` in the root of your project.
+Implementa una qualsiasi di queste API esportandole da una file chiamato `gatsby-node.js` nella radice del tuo progetto.
