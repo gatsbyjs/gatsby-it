@@ -9,7 +9,7 @@ Gatsby fornisce ai plugin e compilatori di sito molte API per controllare i dati
 
 ## Plugin asincroni
 
-Se i tuoi plugin effettuano operazioni asincrone (I/O su disco, accesso a database, chiamare API remote, ecc.), devi ritornare una Promise (usando esplicitamente l'API `Promise` o implicitamente usando la sintassi `async`/`await`) o usando la callback passata al terzo argomento. Gatsby necessita di sapere quando i plugin hanno concluso l'operazione, come alcune APIs, per funzionare correttamente, necessitano prima che altre APIs usate precedentemente siano concluse. Vedi [Debuggare cicli asincroni](/docs/debugging-async-lifecycles/) per maggiori informazioni.
+Se i tuoi plugin effettuano operazioni asincrone (I/O su disco, accesso a database, chiamare API remote, ecc.), devi ritornare una Promise (usando esplicitamente l'API `Promise` o implicitamente usando la sintassi `async`/`await`) o usando la callback passata al terzo argomento. Gatsby necessita di sapere quando i plugin hanno concluso l'operazione, in quanto alcune API, per funzionare correttamente, necessitano prima che altre API usate precedentemente siano concluse. Vedi [Debuggare cicli asincroni](/docs/debugging-async-lifecycles/) per maggiori informazioni.
 
 ```javascript
 // Async/await
@@ -36,4 +36,4 @@ Se il tuo plugin non esegue alcuna operazione asincorna, puoi ritornare direttam
 
 ## Uso
 
-Implementa una qualsiasi di queste APIs esportandole da una file chiamato `gatsby-node.js` nella radice del tuo progetto.
+Implementa una qualsiasi di queste API esportandole da una file chiamato `gatsby-node.js` nella radice del tuo progetto.
